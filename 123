@@ -1,1 +1,155 @@
-https://irimmortal.vercel.app/json/prm/cHJvdG9jb2wqSVJDRip2bGVzcyZuZXR3b3JrKklSQ0Yqd3MmdXVpZCpJUkNGKmM2ODgzOTVhLWIzNmItNDA3MS05NzRiLWJjOTFhYzJhZDJjNCZzbmkqSVJDRipFRFR1bk5lbC1CNnQuUGFHRVMuZGVWJnBvcnQqSVJDRio4NDQzJnBhdGgqSVJDRipzcGVlZC5jbG91ZGZsYXJlLmNvbT9lZD0yMDQ4JnRscypJUkNGKnRydWUmaW5zZWN1cmUqSVJDRip0cnVlJm11eCpJUkNGKnRydWUmY29uY3VycmVuY3kqSVJDRio4JnBhY2tldHMqSVJDRioxLTImbGVuZ3RoKklSQ0YqMTAwLTIwMCZpbnRlcnZhbCpJUkNGKjEwLTIwJmdycGNNb2RlKklSQ0YqZ3VuJnNlcnZpY2VOYW1lKklSQ0YqJmNsZWFuSXAqSVJDRiplcmVuLnllYWdlci5waXBlbGEzLnh5eiZhcHBOYW1lKklSQ0YqbmFwc3Rlcm5ldFYmZmluZ2VycHJpbnQqSVJDRipjaHJvbWUmZGlyZWN0UnVsZXMqSVJDRipmYWxzZQ==
+{
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "eren.yeager.pipela3.xyz",
+            "port": 8443,
+            "users": [
+              {
+                "id": "c688395a-b36b-4071-974b-bc91ac2ad2c4",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": true,
+          "serverName": "EdTunnEl-b6T.pagES.DEv",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "show": false
+        },
+        "wsSettings": {
+          "path": "speed.cloudflare.com?ed=2048",
+          "headers": {
+            "Host": "EdTunnEl-b6T.pagES.DEv"
+          }
+        },
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "mark": 255,
+          "tcpNoDelay": true
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 8,
+        "xudpProxyUDP443": "reject"
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "AsIs",
+        "fragment": {
+          "packets": "1-2",
+          "length": "100-200",
+          "interval": "10-20"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpNoDelay": true,
+          "tcpKeepAliveIdle": 100
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      }
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "enabled": true
+      },
+      {
+        "id": "5627785659655799759",
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "proxy",
+        "enabled": true
+      }
+    ]
+  }
+}
