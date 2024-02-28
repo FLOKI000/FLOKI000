@@ -8,5 +8,4 @@ vless://9782e7ec-145e-4859-9522-8811e005a283@ip.wifi.canfigvpn.pipela3.xyz:5555?
 vless://9782e7ec-145e-4859-9522-8811e005a283@eren.yeager.pipela3.xyz:2087?security=tls&sni=re3.v2logy.xyz&alpn=http/1.1&fp=chrome&type=grpc&encryption=none#%F0%9F%87%AB%F0%9F%87%AE%20F1
 vless://9782e7ec-145e-4859-9522-8811e005a283@eren.yeager.pipela3.xyz:2096?security=tls&sni=re4.v2logy.xyz&alpn=http/1.1&fp=chrome&type=grpc&encryption=none#%F0%9F%87%AB%F0%9F%87%AE%20F2
 vless://9782e7ec-145e-4859-9522-8811e005a283@eren.yeager.pipela3.xyz:2096?security=tls&sni=re5.v2logy.xyz&alpn=http/1.1&fp=chrome&type=grpc&encryption=none#%F0%9F%87%BA%F0%9F%87%B2%20U1%20
-vless://b9ad895b-12ac-40fc-a5ac-a5b2a1285001@eren.yeager.pipela3.xyz:443?security=tls&sni=3k.pureboy.eu.org&fp=chrome&type=ws&path=/?ed%3D2048&host=3k.pureboy.eu.org&encryption=none#%F0%9F%87%AE%F0%9F%87%B7%20Server%201
-vless://cf8b240a-f512-4f02-afed-e1cc706ad849@eren.yeager.pipela3.xyz:8443?security=tls&sni=worker.pipela3.xyz&alpn=http/1.1&fp=chrome&type=ws&path=vless-ws/?@CanfigVpn%3D2083&host=worker.pipela3.xyz&encryption=none#%F0%9F%87%AE%F0%9F%87%B7%20Server%20100
+vless://b9ad895b-12ac-40fc-a5ac-a5b2a1285001@3k.pureboy.eu.org:443?security=tls&sni=3k.pureboy.eu.org&fp=chrome&type=ws&path=/?ed%3D2048&host=3k.pureboy.eu.org&encryption=none#%F0%9F%87%AE%F0%9F%87%B7%20Server%201
