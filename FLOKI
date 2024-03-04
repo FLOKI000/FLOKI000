@@ -9,3 +9,4 @@ vless://9782e7ec-145e-4859-9522-8811e005a283@eren.yeager.pipela3.xyz:2087?securi
 vless://9782e7ec-145e-4859-9522-8811e005a283@eren.yeager.pipela3.xyz:2096?security=tls&sni=re4.v2logy.xyz&alpn=http/1.1&fp=chrome&type=grpc&encryption=none#%F0%9F%87%AB%F0%9F%87%AE%20F2
 vless://9782e7ec-145e-4859-9522-8811e005a283@eren.yeager.pipela3.xyz:2096?security=tls&sni=re5.v2logy.xyz&alpn=http/1.1&fp=chrome&type=grpc&encryption=none#%F0%9F%87%BA%F0%9F%87%B2%20U1%20
 vless://b9ad895b-12ac-40fc-a5ac-a5b2a1285001@3k.pureboy.eu.org:443?security=tls&sni=3k.pureboy.eu.org&fp=chrome&type=ws&path=/?ed%3D2048&host=3k.pureboy.eu.org&encryption=none#%F0%9F%87%AE%F0%9F%87%B7%20Server%201
+vless://c688395a-b36b-4071-974b-bc91ac2ad2c4@ip.canfigvpn.pipela3.xyz:8443?encryption=none&security=tls&sni=edtunnel-b6t.pages.dev&alpn=h2%2Chttp%2F1.1&fp=chrome&type=ws&host=edtunnel-b6t.pages.dev&path=speed.cloudflare.com#%F0%9F%87%A8%F0%9F%87%B1%20Chile%20100
