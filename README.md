@@ -10,7 +10,7 @@
 <div style="margin-top: 25px; text-align: center;">
   <p style="color: #7f8c8d; font-size: 25px;">گیت هاب فلوکی 👇</p>
   <a href="https://github.com/FLOKI000/FLOKI/" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-FLOKI000-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" style="transition: transform 0.01s ease-in-out;" onmouseover="this.style.transform='scale(1.3)'" onmouseout="this.style.transform='scale(1.0)'">
+    <img src="https://img.shields.io/badge/GitHub-FLOKI-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" style="transition: transform 0.01s ease-in-out;" onmouseover="this.style.transform='scale(1.3)'" onmouseout="this.style.transform='scale(1.0)'">
   </a>
 </div>
 
