@@ -3,144 +3,140 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سازنده ترکیب فوتبال</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+<title>سازنده ترکیب فوتبال | FIFA 27 Cards</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,900&family=Vazirmatn:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg-dark: #0a1118;
-    --pitch-green: #0d2b2b;
-    --pitch-green-light: #113a3a;
-    --pitch-line: rgba(255, 255, 255, 0.15);
+    --bg-dark: #060a10;
+    --pitch-green: #0b2626;
+    --pitch-line: rgba(255, 255, 255, 0.17);
     --accent: #00d8a0;
-    --text-main: #ffffff;
+    --accent-2: #00b4ff;
     --text-sub: #8fa3c0;
+    --danger: #ef4444;
+    --shield: polygon(50% 0%, 100% 15%, 100% 65%, 88% 82%, 67% 94%, 50% 100%, 33% 94%, 12% 82%, 0% 65%, 0% 15%);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
+  html, body { width: 100%; }
+
   body {
     font-family: 'Vazirmatn', 'Montserrat', sans-serif;
     background: var(--bg-dark);
-    background-image: 
-      radial-gradient(circle at 50% 0%, rgba(0, 216, 160, 0.15), transparent 60%),
-      linear-gradient(180deg, #0a1118 0%, #060a12 100%);
-    color: var(--text-main);
+    background-image:
+      radial-gradient(circle at 50% 0%, rgba(0, 216, 160, 0.15), transparent 55%),
+      radial-gradient(circle at 100% 100%, rgba(0, 180, 255, 0.08), transparent 45%),
+      linear-gradient(180deg, #0a1118 0%, #05080d 100%);
+    background-attachment: fixed;
+    color: #fff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 10px 10px 40px;
     overflow-x: hidden;
   }
 
   /* ============ TOOLBAR ============ */
   .toolbar {
     width: 100%;
-    max-width: 900px;
+    max-width: 640px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background: rgba(13, 43, 43, 0.6);
-    backdrop-filter: blur(10px);
-    padding: 10px 15px;
-    border-radius: 12px;
-    border: 1px solid rgba(0, 216, 160, 0.2);
-    margin-bottom: 20px;
+    background: rgba(13, 43, 43, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 10px 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 216, 160, 0.22);
+    margin-bottom: 16px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   }
 
-  .brand {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 18px;
-    font-style: italic;
-    color: #fff;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .brand span { color: var(--accent); }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center; }
 
-  .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-  
   select, input[type="text"], input[type="number"] {
     font-family: 'Vazirmatn', sans-serif;
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     color: #fff;
     padding: 8px 12px;
-    border-radius: 8px;
+    border-radius: 9px;
     font-size: 13px;
     outline: none;
-    transition: 0.3s;
+    transition: 0.25s;
   }
-  select:focus, input:focus { border-color: var(--accent); }
+  select:focus, input:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(0,216,160,.15); }
   select option { background: #0a1118; }
 
   .btn {
     font-family: 'Vazirmatn', sans-serif;
     background: linear-gradient(135deg, #00d8a0, #00a87d);
-    color: #000;
+    color: #04120d;
     font-weight: 700;
     border: none;
-    padding: 8px 16px;
-    border-radius: 8px;
+    padding: 8px 14px;
+    border-radius: 9px;
     cursor: pointer;
     font-size: 13px;
-    transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(0, 216, 160, 0.3);
+    transition: 0.25s;
+    box-shadow: 0 4px 14px rgba(0, 216, 160, 0.28);
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
   }
-  .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 216, 160, 0.5); }
-  .btn.ghost { background: rgba(255, 255, 255, 0.1); color: #fff; box-shadow: none; }
-  .btn.ghost:hover { background: rgba(255, 255, 255, 0.2); }
+  .btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 216, 160, 0.45); }
+  .btn:active:not(:disabled) { transform: translateY(0); }
+  .btn:disabled { opacity: .4; cursor: not-allowed; }
+  .btn.ghost { background: rgba(255, 255, 255, 0.09); color: #fff; box-shadow: none; }
+  .btn.ghost:hover:not(:disabled) { background: rgba(255, 255, 255, 0.18); transform: none; }
+  .btn.icon { padding: 8px 11px; font-size: 15px; line-height: 1; }
+  .btn-danger { background: rgba(239, 68, 68, 0.18); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.45); box-shadow: none; }
+  .btn-danger:hover:not(:disabled) { background: rgba(239, 68, 68, 0.35); }
 
-  /* ============ BOARD CONTAINER ============ */
+  /* ============ BOARD ============ */
   .board-container {
     width: 100%;
-    max-width: 700px;
+    max-width: 640px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    gap: 16px;
   }
 
-  /* ============ PITCH & HEADER ============ */
+  /* ============ PITCH ============ */
   .pitch-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 0.75;
-    border-radius: 20px;
+    aspect-ratio: 0.72;
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.8), inset 0 0 100px rgba(0,0,0,0.5);
-    border: 1px solid rgba(0, 216, 160, 0.2);
+    border: 1px solid rgba(0, 216, 160, 0.22);
     background: var(--pitch-green);
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.75), inset 0 0 120px rgba(0,0,0,0.55);
   }
 
-  /* Modern Pitch Background */
   .pitch-bg {
     position: absolute;
     inset: 0;
-    background-image: 
-      linear-gradient(90deg, transparent 50%, rgba(0, 216, 160, 0.03) 50%),
-      linear-gradient(180deg, rgba(0, 216, 160, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 216, 160, 0.05) 1px, transparent 1px);
-    background-size: 10px 10px, 20px 20px, 20px 20px;
+    background-image:
+      linear-gradient(90deg, transparent 50%, rgba(0, 216, 160, 0.035) 50%),
+      linear-gradient(180deg, rgba(0, 216, 160, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 216, 160, 0.045) 1px, transparent 1px);
+    background-size: 10px 10px, 22px 22px, 22px 22px;
     z-index: 0;
   }
   .pitch-bg::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.6) 100%);
+    background: radial-gradient(circle at 50% 45%, transparent 25%, rgba(0,0,0,0.62) 100%);
   }
 
-  /* Pitch Lines */
   .pitch-lines {
     position: absolute;
     inset: 4%;
@@ -149,22 +145,20 @@
     z-index: 1;
     pointer-events: none;
   }
-  .pitch-lines .center-line {
-    position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: var(--pitch-line);
-  }
+  .pitch-lines .center-line { position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: var(--pitch-line); }
   .pitch-lines .center-circle {
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    width: 25%; aspect-ratio: 1; border: 2px solid var(--pitch-line); border-radius: 50%;
+    width: 26%; aspect-ratio: 1; border: 2px solid var(--pitch-line); border-radius: 50%;
   }
   .pitch-lines .penalty-box {
     position: absolute; left: 50%; transform: translateX(-50%);
-    width: 50%; height: 16%; border: 2px solid var(--pitch-line);
+    width: 52%; height: 15%; border: 2px solid var(--pitch-line);
   }
   .pitch-lines .penalty-box.top { top: 0; border-top: none; }
   .pitch-lines .penalty-box.bottom { bottom: 0; border-bottom: none; }
   .pitch-lines .six-yard-box {
     position: absolute; left: 50%; transform: translateX(-50%);
-    width: 25%; height: 7%; border: 2px solid var(--pitch-line);
+    width: 26%; height: 6.5%; border: 2px solid var(--pitch-line);
   }
   .pitch-lines .six-yard-box.top { top: 0; border-top: none; }
   .pitch-lines .six-yard-box.bottom { bottom: 0; border-bottom: none; }
@@ -172,281 +166,678 @@
     position: absolute; left: 50%; transform: translateX(-50%);
     width: 4px; height: 4px; background: var(--pitch-line); border-radius: 50%;
   }
-  .pitch-lines .penalty-spot.top { top: 12%; }
-  .pitch-lines .penalty-spot.bottom { bottom: 12%; }
+  .pitch-lines .penalty-spot.top { top: 11%; }
+  .pitch-lines .penalty-spot.bottom { bottom: 11%; }
 
-  /* Team Header on Pitch */
   .pitch-header {
     position: absolute;
-    top: 4%;
+    top: 3.5%;
     left: 5%;
-    z-index: 10;
-    text-align: left;
+    right: 5%;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    pointer-events: none;
+    direction: ltr;
   }
   .team-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: clamp(20px, 5vw, 32px);
+    font-size: clamp(12px, 4vw, 26px);
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #fff;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.8);
-    line-height: 1;
-  }
-  .formation-badge {
-    display: inline-block;
-    background: var(--accent);
-    color: #000;
-    font-weight: 900;
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-top: 5px;
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  /* ============ PLAYERS GRID ============ */
-  .players-grid {
-    position: absolute;
-    inset: 0;
-    z-index: 5;
-  }
-
-  /* ============ CARD DESIGN (SHIELD SHAPE) ============ */
-  .card {
-    position: absolute;
-    width: clamp(60px, 12vw, 85px);
-    height: clamp(80px, 16vw, 115px);
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    z-index: 10;
-    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.2s;
-    user-select: none;
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
-    background: #2a2a2a;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 5px;
-  }
-  .card:hover {
-    transform: translate(-50%, -50%) scale(1.1);
-    z-index: 50;
-    filter: brightness(1.2);
-  }
-
-  /* Card Types (Colors) */
-  .card.type-normal { background: linear-gradient(135deg, #4a4a4a, #1a1a1a); border: 1px solid #666; }
-  .card.type-bronze { background: linear-gradient(135deg, #cd7f32, #8b4513); border: 1px solid #e8a86f; }
-  .card.type-silver { background: linear-gradient(135deg, #e0e0e0, #9e9e9e); border: 1px solid #fff; }
-  .card.type-gold   { background: linear-gradient(135deg, #ffd700, #b8860b); border: 1px solid #fff4c9; }
-  .card.type-totw   { background: linear-gradient(135deg, #333, #000); border: 1px solid #ffd700; }
-  .card.type-toty   { background: linear-gradient(135deg, #1e3a8a, #0f172a); border: 1px solid #60a5fa; }
-  .card.type-hero   { background: linear-gradient(135deg, #ff4500, #8b0000); border: 1px solid #ffb894; }
-  .card.type-legend { background: linear-gradient(135deg, #8a2be2, #4b0082); border: 1px solid #d8b4fe; }
-  .card.type-icon   { background: linear-gradient(135deg, #ffffff, #a0a0a0); border: 1px solid #fff; }
-
-  /* Card Elements */
-  .card-rating {
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    background: #00d8a0;
-    color: #000;
-    font-weight: 900;
-    font-size: clamp(10px, 2vw, 14px);
-    padding: 1px 5px;
-    border-radius: 4px;
-    font-family: 'Montserrat', sans-serif;
-    z-index: 20;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-  }
-  .card-pos {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    font-size: clamp(8px, 1.5vw, 11px);
-    font-weight: 900;
-    color: #fff;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-    z-index: 20;
-    font-family: 'Montserrat', sans-serif;
-  }
-  .card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-  }
-  .card-img-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    color: rgba(255,255,255,0.2);
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-  }
-  .card-gradient {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 40%, transparent 70%, rgba(0,0,0,0.3) 100%);
-    z-index: 2;
-  }
-  .card-name {
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: clamp(8px, 1.8vw, 12px);
-    font-weight: 700;
-    color: #fff;
-    z-index: 3;
-    text-transform: uppercase;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #ffffff 0%, #00d8a0 40%, #00b4ff 70%, #ffd700 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 3px 12px rgba(0,0,0,0.95)) drop-shadow(0 1px 2px rgba(0,0,0,1));
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 0 4px;
-    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    flex: 1 1 auto;
+    min-width: 0;
   }
-  .card-flag {
-    position: absolute;
-    bottom: 22px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: clamp(10px, 2vw, 16px);
-    z-index: 3;
+  .formation-badge {
+    flex: 0 0 auto;
+    background: var(--accent);
+    color: #04120d;
+    font-weight: 900;
+    font-size: clamp(9px, 2.4vw, 12px);
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .5px;
+    box-shadow: 0 3px 10px rgba(0,216,160,.4);
+    align-self: center;
   }
 
-  /* ============ BENCH ============ */
-  .bench-container {
+  .players-grid { position: absolute; inset: 0; z-index: 5; }
+
+  /* =========================================================
+     ============  FIFA 27 CARD  =============================
+     ========================================================= */
+  .card {
+    position: absolute;
+    width: clamp(42px, 13%, 82px);
+    aspect-ratio: 0.72;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 10;
+    container-type: inline-size;
+    direction: ltr;
+    transition: transform .22s cubic-bezier(.175,.885,.32,1.275), filter .2s;
+    clip-path: var(--shield);
+    background: var(--frame);
+    padding: 1.5px;
+    filter: drop-shadow(0 5px 9px rgba(0,0,0,.6));
+    will-change: transform;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+    outline: none;
+  }
+  .card:focus-visible { filter: drop-shadow(0 0 0 2px var(--accent)) drop-shadow(0 5px 9px rgba(0,0,0,.6)); }
+  .card:hover {
+    transform: translate(-50%, -50%) scale(1.09);
+    z-index: 60;
+    filter: drop-shadow(0 8px 16px rgba(0,0,0,.75)) brightness(1.08);
+  }
+  .card.dragging {
+    opacity: .35;
+    transform: translate(-50%, -50%) scale(0.94);
+  }
+
+  .card.drop-target::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 2px dashed var(--accent);
+    border-radius: 8px;
+    animation: pulse 0.9s infinite;
+    pointer-events: none;
+    z-index: 100;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+  }
+
+  .card-body {
+    position: relative;
     width: 100%;
-    background: rgba(13, 43, 43, 0.6);
+    height: 100%;
+    clip-path: var(--shield);
+    background: var(--body);
+    overflow: hidden;
+    display: block;
+  }
+
+  .card-body::after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -60%;
+    width: 60%;
+    height: 160%;
+    background: linear-gradient(100deg, transparent, rgba(255,255,255,.22), transparent);
+    transform: rotate(18deg);
+    pointer-events: none;
+    z-index: 6;
+  }
+
+  .card-img {
+    position: absolute;
+    left: 0; right: 0;
+    top: 8%;
+    width: 100%;
+    height: 92%;
+    object-fit: cover;
+    object-position: 50% 12%;
+    z-index: 1;
+    display: block;
+    -webkit-user-drag: none;
+    pointer-events: none;
+  }
+  .card-ph {
+    position: absolute;
+    left: 0; right: 0;
+    top: 20%;
+    bottom: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ph);
+    z-index: 1;
+  }
+  .card-ph svg { width: 62%; height: 62%; }
+
+  .card-shade {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom,
+      var(--shade-top) 0%,
+      transparent 26%,
+      transparent 52%,
+      var(--shade-bot) 100%);
+    pointer-events: none;
+  }
+
+  .card-top {
+    position: absolute;
+    top: 9%;
+    left: 9%;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+  }
+  .card-rating {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(11px, 26cqw, 22px);
+    color: var(--accent-txt);
+    letter-spacing: -0.5px;
+    text-shadow: var(--tsh);
+  }
+  .card-pos {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: clamp(6px, 11cqw, 9px);
+    color: var(--accent-txt);
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+    opacity: .95;
+    text-shadow: var(--tsh);
+  }
+
+  .card-foot {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 15%;
+    z-index: 5;
+    text-align: center;
+  }
+  .card-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: clamp(5px, 11cqw, 9px);
+    color: var(--accent-txt);
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    line-height: 1.05;
+    text-shadow: var(--tsh);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-word;
+    padding: 0 2px;
+  }
+
+  /* ---------- 4 CARD TYPES ---------- */
+  .card.type-bronze {
+    --frame: linear-gradient(160deg, #e4a86b, #7a4a1c);
+    --body: linear-gradient(165deg, #b87536 0%, #8a4f1d 55%, #4a2810 100%);
+    --accent-txt: #ffe9ce;
+    --tsh: 0 1px 3px rgba(0,0,0,.8);
+    --shade-top: rgba(40,18,0,.45);
+    --shade-bot: rgba(30,12,0,.9);
+    --ph: rgba(255,255,255,.22);
+  }
+  .card.type-silver {
+    --frame: linear-gradient(160deg, #ffffff, #8b93a0);
+    --body: linear-gradient(165deg, #e9edf2 0%, #b5bcc6 55%, #7d8590 100%);
+    --accent-txt: #1c222a;
+    --tsh: 0 1px 1px rgba(255,255,255,.65);
+    --shade-top: rgba(255,255,255,.5);
+    --shade-bot: rgba(255,255,255,.93);
+    --ph: rgba(0,0,0,.15);
+  }
+  .card.type-gold {
+    --frame: linear-gradient(160deg, #fff7cf, #9d7514);
+    --body: linear-gradient(165deg, #fbde82 0%, #d3a52c 55%, #8a6410 100%);
+    --accent-txt: #2a1f05;
+    --tsh: 0 1px 1px rgba(255,255,255,.55);
+    --shade-top: rgba(255,245,200,.5);
+    --shade-bot: rgba(255,246,205,.95);
+    --ph: rgba(0,0,0,.16);
+  }
+  .card.type-legend {
+    --frame: linear-gradient(160deg, #ffe08a, #7c3aed);
+    --body: linear-gradient(165deg, #2a1a4a 0%, #170a2e 55%, #06010f 100%);
+    --accent-txt: #ffd76b;
+    --tsh: 0 1px 3px rgba(0,0,0,.95);
+    --shade-top: rgba(10,0,30,.55);
+    --shade-bot: rgba(8,0,24,.95);
+    --ph: rgba(255,215,107,.24);
+  }
+  .card.type-legend .card-body::before {
+    content: '';
+    position: absolute;
+    inset: 8% 10% 28% 10%;
+    border: 1px solid rgba(255,215,107,.28);
+    border-radius: 50% 50% 42% 42%;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .card.type-legend {
+    filter: drop-shadow(0 5px 9px rgba(0,0,0,.7)) drop-shadow(0 0 8px rgba(255,215,107,.15));
+  }
+
+  /* =========================================================
+     ============  PANELS  ===================================
+     ========================================================= */
+  .panel {
+    width: 100%;
+    background: rgba(13, 43, 43, 0.55);
     border: 1px solid rgba(0, 216, 160, 0.2);
     border-radius: 15px;
     padding: 12px;
-    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    transition: border-color .2s, box-shadow .2s;
   }
-  .bench-title {
-    font-size: 12px;
+
+  .subs-panel.drop-hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent), 0 10px 30px rgba(0,216,160,.35);
+    background: rgba(0, 216, 160, 0.08);
+  }
+
+  .panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .panel-title {
+    font-size: 12.5px;
     font-weight: 700;
     color: var(--accent);
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 8px;
   }
-  .bench-title::before {
+  .panel-title::before {
     content: '';
     width: 4px; height: 14px;
     background: var(--accent);
     border-radius: 2px;
+    display: block;
   }
-  .bench-slots {
+  .panel-count {
+    background: rgba(0,216,160,.16);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 8px;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .panel-actions { display: flex; gap: 6px; }
+  .btn-mini {
+    font-family: 'Vazirmatn', sans-serif;
+    background: rgba(0, 216, 160, 0.14);
+    border: 1px solid rgba(0, 216, 160, 0.4);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .2s;
+    white-space: nowrap;
+  }
+  .btn-mini:hover { background: rgba(0,216,160,.28); }
+  .btn-mini.danger { color: #fca5a5; border-color: rgba(239,68,68,.45); background: rgba(239,68,68,.14); }
+  .btn-mini.danger:hover { background: rgba(239,68,68,.28); }
+
+  .slot-row {
     display: flex;
     gap: 10px;
     overflow-x: auto;
-    padding-bottom: 5px;
+    overflow-y: hidden;
+    padding: 8px 2px 10px;
+    min-height: 100px;
+    scrollbar-width: thin;
   }
-  .bench-slots::-webkit-scrollbar { height: 6px; }
-  .bench-slots::-webkit-scrollbar-thumb { background: rgba(0, 216, 160, 0.3); border-radius: 3px; }
-  .bench-slots .card {
+  .slot-row::-webkit-scrollbar { height: 6px; }
+  .slot-row::-webkit-scrollbar-track { background: rgba(255,255,255,.05); border-radius: 3px; }
+  .slot-row::-webkit-scrollbar-thumb { background: rgba(0, 216, 160, 0.35); border-radius: 3px; }
+
+  .slot-row .card {
     position: relative;
-    transform: none;
-    top: auto !important;
     left: auto !important;
+    top: auto !important;
+    transform: none;
     flex: 0 0 auto;
-    width: 70px;
-    height: 95px;
+    width: 74px;
   }
-  .bench-slots .card:hover { transform: scale(1.1); }
+  .slot-row .card:hover { transform: translateY(-4px) scale(1.05); z-index: 60; }
+  .slot-row .card.dragging { transform: scale(.94); }
+
+  .sub-card { position: relative; flex: 0 0 auto; }
+  .sub-remove {
+    position: absolute;
+    top: -6px;
+    right: -4px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--danger);
+    color: #fff;
+    border: 2px solid #0d1b1b;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 70;
+    font-family: 'Montserrat', sans-serif;
+    transition: .2s;
+    padding: 0;
+    touch-action: manipulation;
+  }
+  .sub-remove:hover { transform: scale(1.15); background: #ff5b5b; }
+
+  .empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 80px;
+    border: 2px dashed rgba(0, 216, 160, 0.22);
+    border-radius: 12px;
+    color: var(--text-sub);
+    font-size: 12.5px;
+    text-align: center;
+    padding: 16px;
+    line-height: 1.7;
+  }
+
+  /* ============ BENCH GROUPS ============ */
+  .bench-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .bench-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .bench-group-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-sub);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-right: 4px;
+  }
+  .bench-group-title .group-count {
+    background: rgba(255,255,255,.08);
+    color: #cfe;
+    font-size: 10px;
+    padding: 1px 7px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .bench-group .slot-row {
+    min-height: auto;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  /* ============ DRAG GHOST ============ */
+  .drag-ghost {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    width: 78px;
+    aspect-ratio: 0.72;
+    transform: translate(-50%, -50%) scale(1.06) rotate(-3deg);
+    filter: drop-shadow(0 18px 28px rgba(0,0,0,.8));
+    opacity: 0.92;
+    will-change: left, top;
+  }
+  .drag-ghost .card {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100%;
+    transform: none;
+    cursor: grabbing;
+  }
+  .drag-ghost .card:hover { transform: none; }
 
   /* ============ MODAL ============ */
   .modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     display: none;
     align-items: center;
     justify-content: center;
     z-index: 1000;
     padding: 15px;
+    overflow-y: auto;
   }
   .modal-overlay.open { display: flex; }
   .modal-box {
     background: #0d1a26;
     border: 1px solid rgba(0, 216, 160, 0.3);
-    border-radius: 15px;
+    border-radius: 16px;
     width: 100%;
     max-width: 400px;
     padding: 20px;
     box-shadow: 0 20px 50px rgba(0,0,0,0.9);
-    animation: pop 0.3s ease;
+    animation: pop .28s cubic-bezier(.175,.885,.32,1.275);
+    margin: auto;
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
   }
-  @keyframes pop { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  @keyframes pop { from { transform: scale(.94); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
-  .modal-box h3 { font-size: 16px; font-weight: 900; margin-bottom: 15px; color: #fff; text-align: center; }
-  
+  .modal-box h3 { font-size: 15px; font-weight: 900; margin-bottom: 6px; color: #fff; text-align: center; }
+
+  .player-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding: 8px 12px;
+    background: rgba(0,216,160,.08);
+    border: 1px solid rgba(0,216,160,.22);
+    border-radius: 10px;
+    direction: ltr;
+  }
+  .player-badge .pname {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+  .player-badge .ppos {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 11px;
+    color: var(--accent);
+    background: rgba(0,216,160,.15);
+    padding: 2px 8px;
+    border-radius: 5px;
+  }
+
   .form-group { margin-bottom: 12px; }
-  .form-group label { display: block; font-size: 12px; color: var(--text-sub); margin-bottom: 5px; }
+  .form-group label { display: block; font-size: 11.5px; color: var(--text-sub); margin-bottom: 5px; }
   .form-group input, .form-group select {
-    width: 100%; padding: 10px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 8px; color: #fff; font-family: inherit; font-size: 14px;
+    width: 100%; padding: 10px; background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 9px; color: #fff; font-family: inherit; font-size: 14px;
+    outline: none;
   }
-  .form-group input[type="file"] { padding: 8px; font-size: 12px; }
-  
-  .row { display: flex; gap: 10px; }
-  .row .form-group { flex: 1; }
+  .form-group input:focus, .form-group select:focus { border-color: var(--accent); }
+  .form-group select option { background: #0a1118; }
 
-  .modal-actions { display: flex; gap: 10px; margin-top: 20px; }
-  .modal-actions .btn { flex: 1; padding: 12px; }
-  .btn-danger { background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.5); }
-  .btn-danger:hover { background: rgba(239, 68, 68, 0.4); }
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .type-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: rgba(0,0,0,.4);
+    border: 2px solid rgba(255,255,255,.08);
+    border-radius: 9px;
+    cursor: pointer;
+    transition: .2s;
+    font-size: 12.5px;
+    font-weight: 700;
+  }
+  .type-option:hover { background: rgba(255,255,255,.05); }
+  .type-option.selected { border-color: var(--accent); background: rgba(0,216,160,.12); }
+  .type-swatch {
+    width: 16px; height: 16px; border-radius: 4px; flex: 0 0 auto;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,.3), inset 0 -1px 2px rgba(0,0,0,.3);
+  }
+  .sw-bronze { background: linear-gradient(160deg, #e4a86b, #7a4a1c); }
+  .sw-silver { background: linear-gradient(160deg, #ffffff, #8b93a0); }
+  .sw-gold { background: linear-gradient(160deg, #fff7cf, #9d7514); }
+  .sw-legend { background: linear-gradient(160deg, #ffe08a, #7c3aed); }
 
-  /* Responsive */
-  @media (max-width: 600px) {
-    .toolbar { flex-direction: column; align-items: stretch; }
-    .brand { text-align: center; justify-content: center; }
-    .controls { flex-direction: column; }
-    .controls select, .controls input, .controls .btn { width: 100%; }
-    .pitch-wrapper { aspect-ratio: 0.7; }
+  .modal-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .modal-actions .btn { flex: 1 1 auto; padding: 11px 12px; font-size: 13px; min-width: 80px; }
+
+  /* Bench actions */
+  .bench-actions {
+    background: rgba(0,216,160,.06);
+    border: 1px solid rgba(0,216,160,.25);
+    border-radius: 12px;
+    padding: 12px;
+    margin-top: 8px;
+  }
+  .bench-actions > label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 6px;
+    margin-top: 4px;
+  }
+  .bench-actions > label:first-child { margin-top: 0; }
+  .bench-actions select {
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 12.5px;
+    padding: 8px 10px;
+  }
+  .bench-actions .btn {
+    width: 100%;
+    padding: 9px 10px;
+    font-size: 12.5px;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  .bench-actions .btn:last-child { margin-bottom: 0; }
+  .bench-actions .btn.ghost { border: 1px solid rgba(255,255,255,.14); }
+
+  /* Toast */
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: rgba(13, 43, 43, 0.95);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 1px solid var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    z-index: 2000;
+    opacity: 0;
+    transition: .3s;
+    pointer-events: none;
+    box-shadow: 0 8px 24px rgba(0,0,0,.5);
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* ============ EXPORT MODE ============ */
+  body.exporting .bench-panel { display: none !important; }
+  body.exporting .sub-remove { display: none !important; }
+  .export-hide { display: none !important; }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 640px) {
+    body { padding: 8px 8px 30px; }
+    .toolbar { flex-direction: column; align-items: stretch; gap: 8px; padding: 10px; }
+    .controls { flex-direction: column; align-items: stretch; }
+    .controls select, .controls input, .controls .btn { width: 100%; justify-content: center; }
+    .controls .btn.icon { width: auto; flex: 1; }
+    .ctrl-group { display: flex; gap: 8px; }
+    .ctrl-group .btn.icon { flex: 1; }
+    .pitch-wrapper { aspect-ratio: 0.68; border-radius: 14px; }
+    .team-title { font-size: clamp(11px, 4vw, 20px); }
+    .slot-row .card { width: 62px; }
+    .slot-row { min-height: 88px; }
+    .bench-group .slot-row { min-height: auto; }
+    .modal-box { padding: 16px; }
+    .drag-ghost { width: 68px; }
+  }
+
+  @media (max-width: 380px) {
+    .slot-row .card { width: 56px; }
+    .pitch-wrapper { aspect-ratio: 0.66; }
+    .card { width: clamp(38px, 12.5%, 72px); }
+    .team-title { font-size: clamp(10px, 3.6vw, 18px); }
   }
 </style>
 </head>
 <body>
 
-<!-- Toolbar -->
+<!-- ============ TOOLBAR ============ -->
 <div class="toolbar">
-  <div class="brand">⚽ <span>LINEUP</span> BUILDER</div>
   <div class="controls">
-    <select id="formationSelect">
+    <select id="formationSelect" aria-label="سیستم بازی">
       <option value="4-2-3-1">4-2-3-1</option>
       <option value="4-3-3">4-3-3</option>
       <option value="4-4-2">4-4-2</option>
       <option value="3-5-2">3-5-2</option>
       <option value="5-3-2">5-3-2</option>
     </select>
-    <input type="text" id="teamNameInput" value="MADRID TV SHOW" maxlength="20" placeholder="نام تیم">
+    <input type="text" id="teamNameInput" value="MADRID TV SHOW" maxlength="30" placeholder="نام تیم" aria-label="نام تیم">
+    <div class="ctrl-group" style="display:flex;gap:8px;">
+      <button class="btn ghost icon" id="undoBtn" title="بازگردانی (Ctrl+Z)" aria-label="بازگردانی">↶</button>
+      <button class="btn ghost icon" id="redoBtn" title="ازنو (Ctrl+Shift+Z)" aria-label="ازنو">↷</button>
+    </div>
     <button class="btn" id="exportBtn">📥 دانلود عکس</button>
     <button class="btn ghost" id="resetBtn">↺ ریست</button>
   </div>
 </div>
 
-<!-- Main Board -->
+<!-- ============ BOARD ============ -->
 <div class="board-container" id="board">
-  
-  <!-- Pitch -->
+
+  <!-- 1. PITCH -->
   <div class="pitch-wrapper" id="pitch">
     <div class="pitch-bg"></div>
     <div class="pitch-lines">
@@ -459,420 +850,1115 @@
       <div class="penalty-spot top"></div>
       <div class="penalty-spot bottom"></div>
     </div>
-    
-    <!-- Team Header -->
+
     <div class="pitch-header">
       <div class="team-title" id="teamTitleDisplay">MADRID TV SHOW</div>
-      <div class="formation-badge" id="formationBadge">4-2-3-1</div>
+      <div class="formation-badge" id="formationBadge">4-3-3</div>
     </div>
 
-    <!-- Players Grid -->
     <div class="players-grid" id="playersGrid"></div>
   </div>
 
-  <!-- Bench -->
-  <div class="bench-container">
-    <div class="bench-title">نیمکت / بازیکنان تعویضی</div>
-    <div class="bench-slots" id="benchSlots"></div>
+  <!-- 2. SUBSTITUTES -->
+  <div class="panel subs-panel" id="subsPanel">
+    <div class="panel-head">
+      <div class="panel-title">تعویضی‌ها <span class="panel-count" id="subsCount">0</span></div>
+    </div>
+    <div class="slot-row" id="subsSlots"></div>
+  </div>
+
+  <!-- 3. BENCH -->
+  <div class="panel bench-panel" id="benchPanel">
+    <div class="panel-head">
+      <div class="panel-title">ذخیره <span class="panel-count" id="benchCount">0</span></div>
+      <div class="panel-actions">
+        <button class="btn-mini" id="restoreBenchBtn">↻ بازگردانی لیست</button>
+      </div>
+    </div>
+    <div class="bench-groups" id="benchSlots"></div>
   </div>
 
 </div>
 
-<!-- Modal -->
-<div class="modal-overlay" id="modal">
+<!-- ============ MODAL ============ -->
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal-box">
-    <h3 id="modalTitle">ویرایش بازیکن</h3>
-    
+    <h3 id="modalTitle">ویرایش کارت</h3>
+    <div class="player-badge" id="playerBadge">
+      <span class="pname" id="playerBadgeName">—</span>
+      <span class="ppos" id="playerBadgePos">—</span>
+    </div>
+
     <div class="form-group">
-      <label>عکس بازیکن (اختیاری)</label>
-      <input type="file" id="photoInput" accept="image/*">
+      <label for="ratingInput">نمره (۰ تا ۱۰)</label>
+      <input type="number" id="ratingInput" min="0" max="10" step="0.5" value="0">
     </div>
-    <div class="row">
-      <div class="form-group">
-        <label>نام بازیکن</label>
-        <input type="text" id="nameInput" placeholder="مثلاً: MBAPPÉ" maxlength="15">
-      </div>
-      <div class="form-group">
-        <label>پرچم (ایموجی)</label>
-        <input type="text" id="flagInput" placeholder="🇫🇷" maxlength="4">
-      </div>
-    </div>
-    <div class="row">
-      <div class="form-group">
-        <label>پست</label>
-        <input type="text" id="posInput" placeholder="ST" maxlength="4">
-      </div>
-      <div class="form-group">
-        <label>نمره (0-10)</label>
-        <input type="number" id="ratingInput" min="0" max="10" step="0.5" value="0">
-      </div>
-    </div>
+
     <div class="form-group">
       <label>نوع کارت</label>
-      <select id="typeSelect">
-        <option value="normal">عادی (تیره)</option>
-        <option value="bronze">برنزی</option>
-        <option value="silver">نقره‌ای</option>
-        <option value="gold">طلایی</option>
-        <option value="totw">تیم هفته (مشکی-طلایی)</option>
-        <option value="toty">تیم فصل (آبی)</option>
-        <option value="hero">قهرمان (نارنجی)</option>
-        <option value="legend">لجند (بنفش)</option>
-        <option value="icon">آیکون (سفید)</option>
-      </select>
+      <div class="type-grid" id="typeGrid">
+        <div class="type-option" data-type="bronze"><span class="type-swatch sw-bronze"></span>برنز</div>
+        <div class="type-option" data-type="silver"><span class="type-swatch sw-silver"></span>نقره‌ای</div>
+        <div class="type-option" data-type="gold"><span class="type-swatch sw-gold"></span>طلایی</div>
+        <div class="type-option" data-type="legend"><span class="type-swatch sw-legend"></span>لجند</div>
+      </div>
+      <input type="hidden" id="typeSelect" value="silver">
+    </div>
+
+    <!-- Bench-only actions -->
+    <div class="bench-actions" id="benchActions" style="display:none;">
+      <label>↔ انتقال به ترکیب (بجای چه بازیکنی؟)</label>
+      <select id="swapTargetSelect" dir="ltr"></select>
+      <button type="button" class="btn" id="swapBtn">بجای این بازیکن قرار بگیر</button>
+
+      <label>➕ انتقال به تعویضی‌ها (بجای چه بازیکنی؟)</label>
+      <select id="subsTargetSelect" dir="ltr"></select>
+      <button type="button" class="btn ghost" id="toSubsBtn">بجای این بازیکن قرار بگیر</button>
     </div>
 
     <div class="modal-actions">
       <button class="btn ghost" id="cancelBtn">انصراف</button>
-      <button class="btn btn-danger" id="deleteBtn">حذف عکس</button>
+      <button class="btn btn-danger" id="deletePhotoBtn">حذف عکس</button>
+      <button class="btn btn-danger" id="deleteCardBtn" style="display:none">حذف کارت</button>
       <button class="btn" id="saveBtn">ذخیره</button>
     </div>
   </div>
 </div>
 
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast"></div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js"></script>
 <script>
-  // ==================== DATA ====================
-  const FORMATIONS = {
-    '4-2-3-1': [
-      { pos: 'GK', x: 50, y: 90 },
-      { pos: 'LB', x: 15, y: 72 }, { pos: 'CB', x: 38, y: 76 }, { pos: 'CB', x: 62, y: 76 }, { pos: 'RB', x: 85, y: 72 },
-      { pos: 'CDM', x: 35, y: 55 }, { pos: 'CDM', x: 65, y: 55 },
-      { pos: 'LW', x: 15, y: 32 }, { pos: 'CAM', x: 50, y: 36 }, { pos: 'RW', x: 85, y: 32 },
-      { pos: 'ST', x: 50, y: 15 }
-    ],
-    '4-3-3': [
-      { pos: 'GK', x: 50, y: 90 },
-      { pos: 'LB', x: 15, y: 72 }, { pos: 'CB', x: 38, y: 76 }, { pos: 'CB', x: 62, y: 76 }, { pos: 'RB', x: 85, y: 72 },
-      { pos: 'CM', x: 25, y: 52 }, { pos: 'CM', x: 50, y: 56 }, { pos: 'CM', x: 75, y: 52 },
-      { pos: 'LW', x: 15, y: 22 }, { pos: 'ST', x: 50, y: 16 }, { pos: 'RW', x: 85, y: 22 }
-    ],
-    '4-4-2': [
-      { pos: 'GK', x: 50, y: 90 },
-      { pos: 'LB', x: 15, y: 72 }, { pos: 'CB', x: 38, y: 76 }, { pos: 'CB', x: 62, y: 76 }, { pos: 'RB', x: 85, y: 72 },
-      { pos: 'LM', x: 15, y: 45 }, { pos: 'CM', x: 38, y: 50 }, { pos: 'CM', x: 62, y: 50 }, { pos: 'RM', x: 85, y: 45 },
-      { pos: 'ST', x: 38, y: 18 }, { pos: 'ST', x: 62, y: 18 }
-    ],
-    '3-5-2': [
-      { pos: 'GK', x: 50, y: 90 },
-      { pos: 'CB', x: 25, y: 76 }, { pos: 'CB', x: 50, y: 78 }, { pos: 'CB', x: 75, y: 76 },
-      { pos: 'LWB', x: 10, y: 50 }, { pos: 'CM', x: 35, y: 55 }, { pos: 'CM', x: 50, y: 58 }, { pos: 'CM', x: 65, y: 55 }, { pos: 'RWB', x: 90, y: 50 },
-      { pos: 'ST', x: 38, y: 18 }, { pos: 'ST', x: 62, y: 18 }
-    ],
-    '5-3-2': [
-      { pos: 'GK', x: 50, y: 90 },
-      { pos: 'LWB', x: 8, y: 65 }, { pos: 'CB', x: 28, y: 78 }, { pos: 'CB', x: 50, y: 80 }, { pos: 'CB', x: 72, y: 78 }, { pos: 'RWB', x: 92, y: 65 },
-      { pos: 'CM', x: 30, y: 52 }, { pos: 'CM', x: 50, y: 56 }, { pos: 'CM', x: 70, y: 52 },
-      { pos: 'ST', x: 38, y: 18 }, { pos: 'ST', x: 62, y: 18 }
-    ]
+/* =========================================================
+   1) SHIELD SHAPE  →  گرد کردن لبه‌های تیز کارت (اصلاح‌شده)
+   ========================================================= */
+(function buildRoundedShield() {
+  // نقاط اصلی سپر (درصدی)
+  const BASE = [
+    [50, 0], [100, 15], [100, 65], [88, 82], [67, 94],
+    [50, 100], [33, 94], [12, 82], [0, 65], [0, 15]
+  ];
+
+  const CARD_ASPECT = 0.72;          // width / height
+  const W = 100;                      // مقیاس عرض
+  const H = W / CARD_ASPECT;          // = 138.9 → مقیاس ارتفاع
+  const RADIUS_PX = 11;               // شعاع گردی در فضای پیکسلیِ هم‌مقیاس
+  const STEPS = 8;
+
+  // تبدیل به فضای پیکسلی (هم‌مقیاس)
+  const px = BASE.map(p => [p[0] * W / 100, p[1] * H / 100]);
+  const n = px.length;
+  const out = [];
+
+  for (let i = 0; i < n; i++) {
+    const prev = px[(i - 1 + n) % n];
+    const cur  = px[i];
+    const next = px[(i + 1) % n];
+
+    const v1 = [prev[0] - cur[0], prev[1] - cur[1]];
+    const v2 = [next[0] - cur[0], next[1] - cur[1]];
+    const l1 = Math.hypot(v1[0], v1[1]) || 1;
+    const l2 = Math.hypot(v2[0], v2[1]) || 1;
+
+    const r1 = Math.min(RADIUS_PX, l1 / 2);
+    const r2 = Math.min(RADIUS_PX, l2 / 2);
+
+    const pA = [cur[0] + (v1[0] / l1) * r1, cur[1] + (v1[1] / l1) * r1];
+    const pB = [cur[0] + (v2[0] / l2) * r2, cur[1] + (v2[1] / l2) * r2];
+
+    // منحنی درجه دو از pA به pB با نقطه کنترل cur
+    for (let s = 0; s <= STEPS; s++) {
+      const t  = s / STEPS;
+      const mt = 1 - t;
+      const x = mt * mt * pA[0] + 2 * mt * t * cur[0] + t * t * pB[0];
+      const y = mt * mt * pA[1] + 2 * mt * t * cur[1] + t * t * pB[1];
+      out.push([x * 100 / W, y * 100 / H]);
+    }
+  }
+
+  const poly = 'polygon(' + out
+    .map(p => `${p[0].toFixed(3)}% ${p[1].toFixed(3)}%`)
+    .join(', ') + ')';
+
+  document.documentElement.style.setProperty('--shield', poly);
+})();
+
+/* =========================================================
+   PHOTO BASE URL
+   ========================================================= */
+const PHOTO_BASE = 'https://raw.githubusercontent.com/FLOKI000/FLOKI000/refs/heads/main/PNG/';
+
+/* =========================================================
+   FORMATIONS
+   ========================================================= */
+const FORMATIONS = {
+  '4-2-3-1': [
+    { pos: 'GK',  x: 50, y: 89 },
+    { pos: 'LB',  x: 12, y: 71 }, { pos: 'CB', x: 37, y: 74 }, { pos: 'CB', x: 63, y: 74 }, { pos: 'RB', x: 88, y: 71 },
+    { pos: 'CDM', x: 35, y: 55 }, { pos: 'CDM', x: 65, y: 55 },
+    { pos: 'LW',  x: 12, y: 33 }, { pos: 'CAM', x: 50, y: 37 }, { pos: 'RW', x: 88, y: 33 },
+    { pos: 'ST',  x: 50, y: 14 }
+  ],
+  '4-3-3': [
+    { pos: 'GK',  x: 50, y: 89 },
+    { pos: 'LB',  x: 12, y: 71 }, { pos: 'CB', x: 37, y: 74 }, { pos: 'CB', x: 63, y: 74 }, { pos: 'RB', x: 88, y: 71 },
+    { pos: 'CM',  x: 25, y: 52 }, { pos: 'CM', x: 50, y: 56 }, { pos: 'CM', x: 75, y: 52 },
+    { pos: 'LW',  x: 12, y: 27 }, { pos: 'ST', x: 50, y: 14 }, { pos: 'RW', x: 88, y: 27 }
+  ],
+  '4-4-2': [
+    { pos: 'GK',  x: 50, y: 89 },
+    { pos: 'LB',  x: 12, y: 71 }, { pos: 'CB', x: 37, y: 74 }, { pos: 'CB', x: 63, y: 74 }, { pos: 'RB', x: 88, y: 71 },
+    { pos: 'LM',  x: 12, y: 48 }, { pos: 'CM', x: 38, y: 53 }, { pos: 'CM', x: 62, y: 53 }, { pos: 'RM', x: 88, y: 48 },
+    { pos: 'ST',  x: 38, y: 17 }, { pos: 'ST', x: 62, y: 17 }
+  ],
+  '3-5-2': [
+    { pos: 'GK',  x: 50, y: 89 },
+    { pos: 'CB',  x: 27, y: 75 }, { pos: 'CB', x: 50, y: 76 }, { pos: 'CB', x: 73, y: 75 },
+    { pos: 'LWB', x: 10, y: 55 }, { pos: 'CM', x: 35, y: 55 }, { pos: 'CM', x: 50, y: 58 }, { pos: 'CM', x: 65, y: 55 }, { pos: 'RWB', x: 90, y: 55 },
+    { pos: 'ST',  x: 38, y: 17 }, { pos: 'ST', x: 62, y: 17 }
+  ],
+  '5-3-2': [
+    { pos: 'GK',  x: 50, y: 90 },
+    { pos: 'LWB', x: 10, y: 63 }, { pos: 'CB', x: 29, y: 75 }, { pos: 'CB', x: 50, y: 75 }, { pos: 'CB', x: 71, y: 75 }, { pos: 'RWB', x: 90, y: 63 },
+    { pos: 'CM',  x: 30, y: 51 }, { pos: 'CM', x: 50, y: 55 }, { pos: 'CM', x: 70, y: 51 },
+    { pos: 'ST',  x: 38, y: 16 }, { pos: 'ST', x: 62, y: 16 }
+  ]
+};
+
+const STORAGE_KEY = 'football_lineup_builder_v7';
+const MAX_HISTORY = 60;
+const VALID_TYPES = ['bronze', 'silver', 'gold', 'legend'];
+
+/* Position groups for bench grouping */
+const POS_GROUP = {
+  GK:  'GK',
+  CB:  'DEF', LB: 'DEF', RB: 'DEF', LWB: 'DEF', RWB: 'DEF', SW: 'DEF',
+  CM:  'MID', CDM:'MID', CAM:'MID', LM: 'MID', RM: 'MID',
+  ST:  'FWD', LW: 'FWD', RW: 'FWD', CF: 'FWD', SS: 'FWD'
+};
+const GROUP_LABELS = {
+  GK:  '🧤 دروازه‌بان',
+  DEF: '🛡️ دفاع',
+  MID: '⚙️ هافبک',
+  FWD: '⚡ مهاجم'
+};
+
+/* =========================================================
+   REAL MADRID FULL ROSTER
+   ========================================================= */
+const RM_ROSTER = {
+  // GOALKEEPERS
+  1:  { name: 'Courtois',           pos: 'GK',  rating: 8.5, type: 'gold'   },
+  13: { name: 'Lunin',              pos: 'GK',  rating: 7.0, type: 'silver' },
+  26: { name: 'Mestre',             pos: 'GK',  rating: 6.0, type: 'bronze' },
+  31: { name: 'Javi Navarro',       pos: 'GK',  rating: 5.5, type: 'bronze' },
+  // DEFENDERS
+  2:  { name: 'Asencio',            pos: 'CB',  rating: 7.0, type: 'silver' },
+  3:  { name: 'Militao',            pos: 'CB',  rating: 8.5, type: 'gold'   },
+  4:  { name: 'Huijsen',            pos: 'CB',  rating: 8.0, type: 'gold'   },
+  12: { name: 'Alexander-Arnold',   pos: 'RB',  rating: 8.5, type: 'gold'   },
+  16: { name: 'Konate',             pos: 'CB',  rating: 8.0, type: 'gold'   },
+  17: { name: 'Cucurella',          pos: 'LB',  rating: 7.5, type: 'silver' },
+  18: { name: 'Carreras',           pos: 'LB',  rating: 7.0, type: 'silver' },
+  22: { name: 'Rudiger',            pos: 'CB',  rating: 8.5, type: 'gold'   },
+  23: { name: 'Mendy',              pos: 'LB',  rating: 7.5, type: 'silver' },
+  24: { name: 'Dumfries',           pos: 'RB',  rating: 7.5, type: 'silver' },
+  33: { name: 'Rivas',              pos: 'CB',  rating: 6.0, type: 'bronze' },
+  // MIDFIELDERS
+  5:  { name: 'Bellingham',         pos: 'CM',  rating: 9.0, type: 'legend' },
+  6:  { name: 'Camavinga',          pos: 'CM',  rating: 8.0, type: 'gold'   },
+  8:  { name: 'Valverde',           pos: 'CM',  rating: 8.5, type: 'gold'   },
+  14: { name: 'Tchouameni',         pos: 'CDM', rating: 8.0, type: 'gold'   },
+  15: { name: 'Arda Guler',         pos: 'CAM', rating: 7.5, type: 'silver' },
+  20: { name: 'Bernardo Silva',     pos: 'CM',  rating: 8.5, type: 'gold'   },
+  21: { name: 'Brahim Diaz',        pos: 'CAM', rating: 7.5, type: 'silver' },
+  27: { name: 'Pitarch',            pos: 'CM',  rating: 6.0, type: 'bronze' },
+  29: { name: 'Cestero',            pos: 'CM',  rating: 5.5, type: 'bronze' },
+  38: { name: 'Sergio',             pos: 'CM',  rating: 5.5, type: 'bronze' },
+  // FORWARDS
+  7:  { name: 'Vinicius Jr',        pos: 'LW',  rating: 9.5, type: 'legend' },
+  9:  { name: 'Endrick',            pos: 'ST',  rating: 7.5, type: 'silver' },
+  10: { name: 'Mbappe',             pos: 'ST',  rating: 9.5, type: 'legend' },
+  11: { name: 'Rodrygo',            pos: 'RW',  rating: 8.5, type: 'gold'   },
+  19: { name: 'Carlos Espi',        pos: 'ST',  rating: 6.0, type: 'bronze' },
+  25: { name: 'Diomande',           pos: 'LW',  rating: 7.0, type: 'silver' },
+  36: { name: 'Alexis Ciria',       pos: 'ST',  rating: 6.0, type: 'bronze' }
+};
+
+/* Default 4-3-3 Real Madrid starting XI */
+const RM_STARTING_XI = [1, 18, 3, 4, 12, 8, 14, 5, 7, 10, 11];
+
+/* =========================================================
+   STATE
+   ========================================================= */
+let state = {
+  formation: '4-3-3',
+  team: 'MADRID TV SHOW',
+  lineup: [],
+  bench: [],
+  subs: []
+};
+
+let history = [];
+let historyPtr = -1;
+let isApplyingHistory = false;
+
+let editing = null;
+let tempPhoto = null;
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
+function blankPlayer(pos) {
+  return { name: '', pos: pos || '', rating: 0, type: 'silver', photo: null, number: null };
+}
+
+function rosterToPlayer(number, overridePos) {
+  const r = RM_ROSTER[number];
+  if (!r) return blankPlayer(overridePos);
+  return {
+    name: r.name,
+    pos: overridePos || r.pos,
+    rating: r.rating,
+    type: r.type,
+    photo: PHOTO_BASE + number + '.PNG',
+    number: number
   };
+}
 
-  const BENCH_SIZE = 7;
-  const STORAGE_KEY = 'football_lineup_builder_v2';
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
 
-  let state = {
-    formation: '4-2-3-1',
-    team: 'MADRID TV SHOW',
-    lineup: [],
-    bench: []
-  };
+function getZoneArray(zone) {
+  if (zone === 'lineup') return state.lineup;
+  if (zone === 'bench')  return state.bench;
+  if (zone === 'sub')    return state.subs;
+  return null;
+}
 
-  let editing = null; // { type: 'lineup'|'bench', index: number }
-  let tempPhoto = null;
+function getPlayer(zone, index) {
+  const arr = getZoneArray(zone);
+  return arr ? arr[index] : null;
+}
 
-  // ==================== UTILS ====================
-  function blankPlayer() {
-    return { name: '', pos: '', rating: 0, type: 'normal', photo: null, flag: '' };
+function initState() {
+  const f = FORMATIONS[state.formation];
+  state.lineup = RM_STARTING_XI.map((num, i) => {
+    const slotPos = f[i] ? f[i].pos : 'SUB';
+    return rosterToPlayer(num, slotPos);
+  });
+
+  const starterSet = new Set(RM_STARTING_XI);
+  state.bench = Object.keys(RM_ROSTER)
+    .map(Number)
+    .filter(num => !starterSet.has(num))
+    .sort((a, b) => a - b)
+    .map(num => rosterToPlayer(num));
+
+  state.subs = [];
+}
+
+/* =========================================================
+   HISTORY
+   ========================================================= */
+function snapshot() {
+  return JSON.stringify({
+    formation: state.formation,
+    team: state.team,
+    lineup: state.lineup,
+    bench: state.bench,
+    subs: state.subs
+  });
+}
+
+function pushHistory() {
+  if (isApplyingHistory) return;
+  history = history.slice(0, historyPtr + 1);
+  history.push(snapshot());
+  historyPtr = history.length - 1;
+  if (history.length > MAX_HISTORY) {
+    history.shift();
+    historyPtr--;
   }
+  updateHistoryButtons();
+}
 
-  function initState() {
-    const f = FORMATIONS[state.formation];
-    state.lineup = f.map(p => {
-      const o = blankPlayer();
-      o.pos = p.pos;
-      return o;
-    });
-    state.bench = Array.from({ length: BENCH_SIZE }, () => blankPlayer());
-  }
+function undo() {
+  if (historyPtr <= 0) return;
+  historyPtr--;
+  applyHistory(history[historyPtr]);
+  toast('بازگردانی شد');
+}
 
-  function save() {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  }
+function redo() {
+  if (historyPtr >= history.length - 1) return;
+  historyPtr++;
+  applyHistory(history[historyPtr]);
+  toast('ازنو انجام شد');
+}
 
-  function load() {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return false;
-    try {
-      const data = JSON.parse(raw);
-      if (!data || !FORMATIONS[data.formation]) return false;
-      state = data;
-      if (state.lineup.length !== FORMATIONS[state.formation].length) {
-        state.lineup = FORMATIONS[state.formation].map((p, i) => {
-          const old = state.lineup[i] || blankPlayer();
-          old.pos = p.pos;
-          return old;
-        });
-      }
-      if (state.bench.length !== BENCH_SIZE) {
-        state.bench = Array.from({ length: BENCH_SIZE }, (_, i) => state.bench[i] || blankPlayer());
-      }
-      return true;
-    } catch (e) { return false; }
-  }
-
-  // ==================== RENDER ====================
-  function render() {
-    // Update headers
-    document.getElementById('teamTitleDisplay').textContent = state.team || 'MADRID TV SHOW';
-    document.getElementById('formationBadge').textContent = state.formation;
-    document.getElementById('formationSelect').value = state.formation;
-    document.getElementById('teamNameInput').value = state.team;
-
-    // Render Lineup
-    const f = FORMATIONS[state.formation];
-    const grid = document.getElementById('playersGrid');
-    grid.innerHTML = state.lineup.map((p, i) => {
-      const pos = f[i];
-      const photoHtml = p.photo 
-        ? `<img src="${p.photo}" class="card-img" alt="">` 
-        : `<div class="card-img-placeholder">👤</div>`;
-      
-      const ratingVal = Number(p.rating || 0).toFixed(1);
-      const displayName = p.name ? p.name : '---';
-      
-      return `
-        <div class="card type-${p.type}" style="left: ${pos.x}%; top: ${pos.y}%;" data-type="lineup" data-index="${i}">
-          <div class="card-gradient"></div>
-          ${photoHtml}
-          <div class="card-rating">${ratingVal}</div>
-          <div class="card-pos">${p.pos}</div>
-          ${p.flag ? `<div class="card-flag">${p.flag}</div>` : ''}
-          <div class="card-name">${displayName}</div>
-        </div>
-      `;
-    }).join('');
-
-    // Render Bench
-    const benchSlots = document.getElementById('benchSlots');
-    benchSlots.innerHTML = state.bench.map((p, i) => {
-      const photoHtml = p.photo 
-        ? `<img src="${p.photo}" class="card-img" alt="">` 
-        : `<div class="card-img-placeholder">👤</div>`;
-      
-      const ratingVal = Number(p.rating || 0).toFixed(1);
-      const displayName = p.name ? p.name : '---';
-      
-      return `
-        <div class="card type-${p.type}" data-type="bench" data-index="${i}">
-          <div class="card-gradient"></div>
-          ${photoHtml}
-          <div class="card-rating">${ratingVal}</div>
-          <div class="card-pos">${p.pos || 'SUB'}</div>
-          ${p.flag ? `<div class="card-flag">${p.flag}</div>` : ''}
-          <div class="card-name">${displayName}</div>
-        </div>
-      `;
-    }).join('');
-  }
-
-  // ==================== MODAL ====================
-  const modal = document.getElementById('modal');
-  const modalTitle = document.getElementById('modalTitle');
-  const nameInput = document.getElementById('nameInput');
-  const flagInput = document.getElementById('flagInput');
-  const posInput = document.getElementById('posInput');
-  const ratingInput = document.getElementById('ratingInput');
-  const typeSelect = document.getElementById('typeSelect');
-  const photoInput = document.getElementById('photoInput');
-
-  function openModal(type, index) {
-    editing = { type, index };
-    const p = type === 'lineup' ? state.lineup[index] : state.bench[index];
-    if (!p) return;
-
-    modalTitle.textContent = type === 'lineup' ? `ویرایش بازیکن (پست: ${p.pos})` : `ویرایش بازیکن نیمکت #${index + 1}`;
-    nameInput.value = p.name || '';
-    flagInput.value = p.flag || '';
-    posInput.value = p.pos || '';
-    ratingInput.value = p.rating || 0;
-    typeSelect.value = p.type || 'normal';
-    tempPhoto = p.photo || null;
-    photoInput.value = '';
-
-    modal.classList.add('open');
-  }
-
-  function closeModal() {
-    modal.classList.remove('open');
-    editing = null;
-    tempPhoto = null;
-  }
-
-  function saveModal() {
-    if (!editing) return;
-    const p = editing.type === 'lineup' ? state.lineup[editing.index] : state.bench[editing.index];
-    
-    let rating = parseFloat(ratingInput.value);
-    if (isNaN(rating)) rating = 0;
-    rating = Math.min(10, Math.max(0, Math.round(rating * 2) / 2));
-
-    p.name = nameInput.value.trim();
-    p.flag = flagInput.value.trim();
-    p.pos = posInput.value.trim().toUpperCase();
-    p.rating = rating;
-    p.type = typeSelect.value;
-    p.photo = tempPhoto;
-
-    closeModal();
+function applyHistory(snap) {
+  isApplyingHistory = true;
+  try {
+    const data = JSON.parse(snap);
+    state.formation = data.formation;
+    state.team = data.team;
+    state.lineup = data.lineup;
+    state.bench = data.bench;
+    state.subs = data.subs;
     render();
     save();
+  } finally {
+    isApplyingHistory = false;
   }
+  updateHistoryButtons();
+}
 
-  // ==================== EVENT LISTENERS ====================
-  document.getElementById('playersGrid').addEventListener('click', (e) => {
-    const card = e.target.closest('.card');
-    if (card) openModal('lineup', Number(card.dataset.index));
-  });
+function updateHistoryButtons() {
+  const u = document.getElementById('undoBtn');
+  const r = document.getElementById('redoBtn');
+  if (u) u.disabled = historyPtr <= 0;
+  if (r) r.disabled = historyPtr >= history.length - 1;
+}
 
-  document.getElementById('benchSlots').addEventListener('click', (e) => {
-    const card = e.target.closest('.card');
-    if (card) openModal('bench', Number(card.dataset.index));
-  });
+/* =========================================================
+   PERSIST
+   ========================================================= */
+function save() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+}
 
-  document.getElementById('saveBtn').addEventListener('click', saveModal);
-  document.getElementById('cancelBtn').addEventListener('click', closeModal);
-  document.getElementById('deleteBtn').addEventListener('click', () => {
-    tempPhoto = null;
-    photoInput.value = '';
-    alert('عکس حذف شد. برای اعمال تغییرات، ذخیره کنید.');
-  });
+function load() {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (!raw) return false;
+  try {
+    const data = JSON.parse(raw);
+    if (!data || !FORMATIONS[data.formation]) return false;
+    state.formation = data.formation;
+    state.team = data.team || 'MADRID TV SHOW';
 
-  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-  
-  // Photo Upload
-  photoInput.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      const img = new Image();
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        const MAX = 400;
-        let w = img.width, h = img.height;
-        if (w > MAX || h > MAX) {
-          const r = Math.min(MAX / w, MAX / h);
-          w *= r; h *= r;
-        }
-        canvas.width = w; canvas.height = h;
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(img, 0, 0, w, h);
-        tempPhoto = canvas.toDataURL('image/png');
-      };
-      img.src = ev.target.result;
-    };
-    reader.readAsDataURL(file);
-  });
+    if (!Array.isArray(data.subs)) data.subs = [];
+    if (!Array.isArray(data.lineup)) data.lineup = [];
+    if (!Array.isArray(data.bench))  data.bench = [];
 
-  // Formation & Team Name
-  document.getElementById('formationSelect').addEventListener('change', (e) => {
-    state.formation = e.target.value;
     const f = FORMATIONS[state.formation];
-    state.lineup = f.map((pos, i) => {
-      const old = state.lineup[i] || blankPlayer();
-      old.pos = pos.pos;
+    state.lineup = f.map((p, i) => {
+      const old = data.lineup[i] || blankPlayer();
+      if (!VALID_TYPES.includes(old.type)) old.type = 'silver';
       return old;
     });
+    state.bench = data.bench.map(p => {
+      if (!VALID_TYPES.includes(p.type)) p.type = 'silver';
+      return p;
+    });
+    state.subs = data.subs.map(p => {
+      if (!VALID_TYPES.includes(p.type)) p.type = 'silver';
+      return p;
+    });
+    return true;
+  } catch (e) { return false; }
+}
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+let toastTimer = null;
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 1600);
+}
+
+/* =========================================================
+   CARD RENDERER
+   ========================================================= */
+function cardHTML(p, zone, idx, extraStyle, extraClass) {
+  const r = Number(p.rating) || 0;
+  const ratingTxt = r > 0 ? (r % 1 === 0 ? r.toFixed(0) : r.toFixed(1)) : '–';
+  const nameTxt   = (p.name || '').trim() ? escapeHtml(p.name.trim()) : '—';
+  const posTxt    = (p.pos  || '').trim() ? escapeHtml(p.pos.trim().toUpperCase()) : '—';
+  const typeCls   = VALID_TYPES.includes(p.type) ? p.type : 'silver';
+
+  const media = p.photo
+    ? `<img class="card-img" src="${escapeHtml(p.photo)}" alt="" crossorigin="anonymous" onerror="this.onerror=null;this.outerHTML='<div class=\\'card-ph\\'><svg viewBox=\\'0 0 24 24\\' fill=\\'currentColor\\'><path d=\\'M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.97 0-9 2.69-9 6v2h18v-2c0-3.31-4.03-6-9-6Z\\'/></svg></div>'">`
+    : `<div class="card-ph"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.97 0-9 2.69-9 6v2h18v-2c0-3.31-4.03-6-9-6Z"/></svg></div>`;
+
+  const ariaLabel = `${nameTxt}، پست ${posTxt}، امتیاز ${ratingTxt}`;
+
+  return `
+    <div class="card type-${typeCls} ${extraClass || ''}"
+         data-zone="${zone}" data-index="${idx}"
+         role="button" tabindex="0"
+         aria-label="${escapeHtml(ariaLabel)}"
+         style="${extraStyle || ''}">
+      <div class="card-body">
+        ${media}
+        <div class="card-shade"></div>
+        <div class="card-top">
+          <div class="card-rating">${ratingTxt}</div>
+          <div class="card-pos">${posTxt}</div>
+        </div>
+        <div class="card-foot">
+          <span class="card-name">${nameTxt}</span>
+        </div>
+      </div>
+    </div>`;
+}
+
+/* =========================================================
+   RENDER
+   ========================================================= */
+function render() {
+  document.getElementById('teamTitleDisplay').textContent = state.team || 'MADRID TV SHOW';
+  document.getElementById('formationBadge').textContent = state.formation;
+  document.getElementById('formationSelect').value = state.formation;
+  document.getElementById('teamNameInput').value = state.team;
+
+  const f = FORMATIONS[state.formation];
+  document.getElementById('playersGrid').innerHTML = state.lineup.map((p, i) => {
+    const slot = f[i] || { x: 50, y: 50, pos: '?' };
+    const displayP = { ...p, pos: slot.pos };
+    return cardHTML(displayP, 'lineup', i, `left:${slot.x}%;top:${slot.y}%;`);
+  }).join('');
+
+  // -------- SUBS --------
+  const subsWrap = document.getElementById('subsSlots');
+  if (state.subs.length === 0) {
+    subsWrap.innerHTML = `<div class="empty-state">هنوز بازیکن تعویضی اضافه نشده است<br>از لیست «ذخیره» یک بازیکن را بکشید و به اینجا رها کنید</div>`;
+  } else {
+    subsWrap.innerHTML = state.subs.map((p, i) => `
+      <div class="sub-card">
+        ${cardHTML(p, 'sub', i)}
+        <button class="sub-remove" data-remove="${i}" aria-label="حذف تعویضی" title="حذف">×</button>
+      </div>
+    `).join('');
+  }
+
+  // -------- BENCH (grouped) --------
+  const groups = { GK: [], DEF: [], MID: [], FWD: [] };
+  state.bench.forEach((p, i) => {
+    const posUp = (p.pos || '').toUpperCase();
+    const g = POS_GROUP[posUp] || 'MID';
+    groups[g].push({ p, i });
+  });
+
+  const benchWrap = document.getElementById('benchSlots');
+  benchWrap.innerHTML = ['GK', 'DEF', 'MID', 'FWD'].map(g => {
+    const list = groups[g];
+    if (!list.length) return '';
+    return `
+      <div class="bench-group">
+        <div class="bench-group-title">${GROUP_LABELS[g]} <span class="group-count">${list.length}</span></div>
+        <div class="slot-row">
+          ${list.map(({ p, i }) => cardHTML(p, 'bench', i)).join('')}
+        </div>
+      </div>`;
+  }).join('') || `<div class="empty-state">لیست ذخیره خالی است</div>`;
+
+  const benchFilled = state.bench.filter(p => (p.name || '').trim() || p.photo).length;
+  document.getElementById('benchCount').textContent = benchFilled;
+  document.getElementById('subsCount').textContent = state.subs.length;
+
+  updateHistoryButtons();
+}
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+const modal          = document.getElementById('modal');
+const modalTitle     = document.getElementById('modalTitle');
+const playerBadgeName= document.getElementById('playerBadgeName');
+const playerBadgePos = document.getElementById('playerBadgePos');
+const ratingInput    = document.getElementById('ratingInput');
+const typeSelect     = document.getElementById('typeSelect');
+const deletePhotoBtn = document.getElementById('deletePhotoBtn');
+const deleteCardBtn  = document.getElementById('deleteCardBtn');
+const typeGrid       = document.getElementById('typeGrid');
+const benchActions   = document.getElementById('benchActions');
+const swapTargetSelect = document.getElementById('swapTargetSelect');
+const subsTargetSelect = document.getElementById('subsTargetSelect');
+
+function populateSwapOptions() {
+  // Lineup targets
+  swapTargetSelect.innerHTML = '';
+  const f = FORMATIONS[state.formation];
+  state.lineup.forEach((p, i) => {
+    const pos = f[i]?.pos || '?';
+    const name = (p.name || '—').trim() || '—';
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = `${pos} — ${name}`;
+    swapTargetSelect.appendChild(opt);
+  });
+
+  // Subs targets
+  subsTargetSelect.innerHTML = '';
+  if (state.subs.length === 0) {
+    const opt = document.createElement('option');
+    opt.value = 'new';
+    opt.textContent = '(لیست تعویضی‌ها خالی است - به انتها اضافه می‌شود)';
+    subsTargetSelect.appendChild(opt);
+  } else {
+    state.subs.forEach((p, i) => {
+      const pos = (p.pos || 'SUB').toUpperCase();
+      const name = (p.name || '—').trim() || '—';
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = `${pos} — ${name}`;
+      subsTargetSelect.appendChild(opt);
+    });
+    const newOpt = document.createElement('option');
+    newOpt.value = 'new';
+    newOpt.textContent = '➕ افزودن به انتهای لیست تعویضی‌ها';
+    subsTargetSelect.appendChild(newOpt);
+  }
+}
+
+function openModal(zone, index) {
+  const p = getPlayer(zone, index);
+  if (!p) return;
+  editing = { zone, index };
+
+  if (zone === 'lineup')      modalTitle.textContent = 'ویرایش کارت ترکیب';
+  else if (zone === 'bench')  modalTitle.textContent = 'ویرایش کارت ذخیره (نمیکت)';
+  else                        modalTitle.textContent = 'ویرایش کارت تعویضی';
+
+  const f = FORMATIONS[state.formation];
+  const displayPos = zone === 'lineup' ? (f[index]?.pos || p.pos) : p.pos;
+  playerBadgeName.textContent = (p.name || '').trim() || '—';
+  playerBadgePos.textContent  = (displayPos || '').trim() || '—';
+
+  ratingInput.value = p.rating || 0;
+  typeSelect.value  = VALID_TYPES.includes(p.type) ? p.type : 'silver';
+  updateTypeGrid();
+
+  tempPhoto = p.photo || null;
+
+  deleteCardBtn.style.display = (zone === 'sub') ? '' : 'none';
+  deletePhotoBtn.style.display = (zone === 'sub') ? 'none' : '';
+
+  if (zone === 'bench') {
+    benchActions.style.display = '';
+    populateSwapOptions();
+  } else {
+    benchActions.style.display = 'none';
+  }
+
+  modal.classList.add('open');
+}
+
+function closeModal() {
+  modal.classList.remove('open');
+  editing = null;
+  tempPhoto = null;
+}
+
+function updateTypeGrid() {
+  const cur = typeSelect.value;
+  typeGrid.querySelectorAll('.type-option').forEach(o => {
+    o.classList.toggle('selected', o.dataset.type === cur);
+  });
+}
+
+typeGrid.addEventListener('click', (e) => {
+  const opt = e.target.closest('.type-option');
+  if (!opt) return;
+  typeSelect.value = opt.dataset.type;
+  updateTypeGrid();
+});
+
+function saveModal() {
+  if (!editing) return;
+  const p = getPlayer(editing.zone, editing.index);
+  if (!p) { closeModal(); return; }
+
+  let rating = parseFloat(ratingInput.value);
+  if (isNaN(rating)) rating = 0;
+  rating = Math.min(10, Math.max(0, Math.round(rating * 2) / 2));
+
+  pushHistory();
+
+  p.rating = rating;
+  p.type   = VALID_TYPES.includes(typeSelect.value) ? typeSelect.value : 'silver';
+  p.photo  = tempPhoto;
+
+  closeModal();
+  render();
+  save();
+}
+
+/* =========================================================
+   IMAGE PROCESSING
+   ========================================================= */
+function processImageFile(file, cb) {
+  if (!file || !file.type.startsWith('image/')) return;
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    const img = new Image();
+    img.onload = () => {
+      const MAX = 420;
+      let w = img.width, h = img.height;
+      if (w > MAX || h > MAX) {
+        const r = Math.min(MAX / w, MAX / h);
+        w = Math.round(w * r);
+        h = Math.round(h * r);
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, w, h);
+      cb(canvas.toDataURL('image/png'));
+    };
+    img.src = ev.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+/* =========================================================
+   DRAG & DROP
+   ========================================================= */
+let dragSource = null;
+let dragGhost = null;
+let dragMoved = false;
+let dragJustEnded = false;
+let currentDropTarget = null;
+
+const DRAG_THRESHOLD = 6;
+
+function handlePointerDown(e) {
+  if (e.target.closest('.sub-remove')) return;
+  if (e.pointerType === 'mouse' && e.button !== 0) return;
+
+  const card = e.target.closest('.card');
+  if (!card) return;
+  if (!card.dataset.zone) return;
+
+  dragSource = {
+    zone: card.dataset.zone,
+    index: Number(card.dataset.index),
+    el: card,
+    pointerId: e.pointerId,
+    startX: e.clientX,
+    startY: e.clientY
+  };
+  dragMoved = false;
+  currentDropTarget = null;
+
+  document.addEventListener('pointermove', handlePointerMove, { passive: false });
+  document.addEventListener('pointerup', handlePointerUp);
+  document.addEventListener('pointercancel', handlePointerUp);
+}
+
+function handlePointerMove(e) {
+  if (!dragSource || e.pointerId !== dragSource.pointerId) return;
+
+  const dx = e.clientX - dragSource.startX;
+  const dy = e.clientY - dragSource.startY;
+  const dist = Math.hypot(dx, dy);
+
+  if (!dragMoved && dist < DRAG_THRESHOLD) return;
+
+  if (!dragMoved) {
+    dragMoved = true;
+    dragSource.el.classList.add('dragging');
+    document.body.style.cursor = 'grabbing';
+
+    dragGhost = document.createElement('div');
+    dragGhost.className = 'drag-ghost';
+    dragGhost.innerHTML = dragSource.el.outerHTML;
+    const clonedCard = dragGhost.querySelector('.card');
+    if (clonedCard) clonedCard.classList.remove('dragging');
+    document.body.appendChild(dragGhost);
+  }
+
+  e.preventDefault();
+
+  if (dragGhost) {
+    dragGhost.style.left = e.clientX + 'px';
+    dragGhost.style.top = e.clientY + 'px';
+  }
+
+  const el = document.elementFromPoint(e.clientX, e.clientY);
+  const targetCard = el && el.closest('.card');
+  const subsPanelEl = document.getElementById('subsPanel');
+
+  if (targetCard && targetCard !== dragSource.el && targetCard.dataset.zone) {
+    if (currentDropTarget !== targetCard) {
+      if (currentDropTarget) currentDropTarget.classList.remove('drop-target');
+      targetCard.classList.add('drop-target');
+      currentDropTarget = targetCard;
+    }
+    if (subsPanelEl) subsPanelEl.classList.remove('drop-hover');
+  } else {
+    if (currentDropTarget) {
+      currentDropTarget.classList.remove('drop-target');
+      currentDropTarget = null;
+    }
+    // Highlight subs panel if source is bench and pointer is over subs panel
+    if (dragSource.zone === 'bench' && el && el.closest('#subsPanel')) {
+      if (subsPanelEl) subsPanelEl.classList.add('drop-hover');
+    } else {
+      if (subsPanelEl) subsPanelEl.classList.remove('drop-hover');
+    }
+  }
+}
+
+function handlePointerUp(e) {
+  if (!dragSource || e.pointerId !== dragSource.pointerId) return;
+
+  const wasDrag = dragMoved;
+  const source = dragSource;
+
+  if (dragGhost) { dragGhost.remove(); dragGhost = null; }
+  if (source.el) source.el.classList.remove('dragging');
+  if (currentDropTarget) { currentDropTarget.classList.remove('drop-target'); currentDropTarget = null; }
+  const subsPanelEl = document.getElementById('subsPanel');
+  if (subsPanelEl) subsPanelEl.classList.remove('drop-hover');
+  document.body.style.cursor = '';
+  document.removeEventListener('pointermove', handlePointerMove);
+  document.removeEventListener('pointerup', handlePointerUp);
+  document.removeEventListener('pointercancel', handlePointerUp);
+
+  dragSource = null;
+  dragMoved = false;
+
+  if (wasDrag) {
+    dragJustEnded = true;
+    requestAnimationFrame(() => { dragJustEnded = false; });
+
+    const el = document.elementFromPoint(e.clientX, e.clientY);
+    const targetCard = el && el.closest('.card');
+
+    if (targetCard && targetCard.dataset.zone) {
+      const tZone = targetCard.dataset.zone;
+      const tIdx  = Number(targetCard.dataset.index);
+      if (tZone !== source.zone || tIdx !== source.index) {
+        performSwap(source.zone, source.index, tZone, tIdx);
+      }
+    } else if (source.zone === 'bench' && el && el.closest('#subsPanel')) {
+      // Drop bench player onto subs panel → move it
+      pushHistory();
+      const p = state.bench.splice(source.index, 1)[0];
+      state.subs.push(p);
+      render();
+      save();
+      toast('به تعویضی‌ها اضافه شد');
+    }
+  } else {
+    if (!dragJustEnded) {
+      openModal(source.zone, source.index);
+    }
+  }
+}
+
+function performSwap(srcZone, srcIdx, tgtZone, tgtIdx) {
+  const a = getZoneArray(srcZone);
+  const b = getZoneArray(tgtZone);
+  if (!a || !b) return;
+  if (a[srcIdx] === undefined || b[tgtIdx] === undefined) return;
+
+  pushHistory();
+
+  if (a === b) {
+    [a[srcIdx], a[tgtIdx]] = [a[tgtIdx], a[srcIdx]];
+  } else {
+    [a[srcIdx], b[tgtIdx]] = [b[tgtIdx], a[srcIdx]];
+  }
+
+  render();
+  save();
+  toast('جابجا شد');
+}
+
+/* =========================================================
+   EVENT BINDINGS
+   ========================================================= */
+document.addEventListener('pointerdown', handlePointerDown);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    const card = e.target.closest && e.target.closest('.card');
+    if (card && card.dataset.zone && !modal.classList.contains('open')) {
+      e.preventDefault();
+      openModal(card.dataset.zone, Number(card.dataset.index));
+    }
+  }
+});
+
+document.getElementById('subsSlots').addEventListener('click', (e) => {
+  const rm = e.target.closest('.sub-remove');
+  if (!rm) return;
+  e.stopPropagation();
+  e.preventDefault();
+  const i = Number(rm.dataset.remove);
+  pushHistory();
+  state.subs.splice(i, 1);
+  render();
+  save();
+  toast('تعویضی حذف شد');
+});
+
+document.getElementById('restoreBenchBtn').addEventListener('click', () => {
+  if (!confirm('لیست ذخیره به حالت پیش‌فرض برگردد؟')) return;
+  pushHistory();
+  const starterSet = new Set(RM_STARTING_XI);
+  state.bench = Object.keys(RM_ROSTER)
+    .map(Number)
+    .filter(num => !starterSet.has(num))
+    .sort((a, b) => a - b)
+    .map(num => rosterToPlayer(num));
+  render();
+  save();
+  toast('لیست بازگردانی شد');
+});
+
+document.getElementById('saveBtn').addEventListener('click', saveModal);
+document.getElementById('cancelBtn').addEventListener('click', closeModal);
+
+deletePhotoBtn.addEventListener('click', () => {
+  if (!editing) return;
+  const p = getPlayer(editing.zone, editing.index);
+  if (p) {
+    pushHistory();
+    p.photo = null;
     render();
     save();
-  });
+  }
+  closeModal();
+});
 
-  document.getElementById('teamNameInput').addEventListener('input', (e) => {
-    state.team = e.target.value;
-    document.getElementById('teamTitleDisplay').textContent = state.team || 'MADRID TV SHOW';
+deleteCardBtn.addEventListener('click', () => {
+  if (editing && editing.zone === 'sub') {
+    pushHistory();
+    state.subs.splice(editing.index, 1);
+    render();
     save();
-  });
+  }
+  closeModal();
+});
 
-  // Reset
-  document.getElementById('resetBtn').addEventListener('click', () => {
-    if (confirm('آیا از پاک کردن تمام اطلاعات مطمئن هستید؟')) {
-      localStorage.removeItem(STORAGE_KEY);
-      state = { formation: '4-2-3-1', team: 'MADRID TV SHOW', lineup: [], bench: [] };
-      initState();
+/* -------- BENCH ACTIONS -------- */
+document.getElementById('swapBtn').addEventListener('click', () => {
+  if (!editing || editing.zone !== 'bench') return;
+  const targetIdx = Number(swapTargetSelect.value);
+  if (isNaN(targetIdx) || targetIdx < 0 || targetIdx >= state.lineup.length) return;
+
+  pushHistory();
+  const benchPlayer  = state.bench[editing.index];
+  const lineupPlayer = state.lineup[targetIdx];
+
+  state.lineup[targetIdx] = benchPlayer;
+  state.bench[editing.index] = lineupPlayer;
+
+  closeModal();
+  render();
+  save();
+  toast('بازیکن به ترکیب منتقل شد');
+});
+
+document.getElementById('toSubsBtn').addEventListener('click', () => {
+  if (!editing || editing.zone !== 'bench') return;
+  const targetVal = subsTargetSelect.value;
+
+  pushHistory();
+  const p = state.bench[editing.index];
+
+  if (targetVal === 'new' || state.subs.length === 0) {
+    // Append to subs and remove from bench
+    state.subs.push(p);
+    state.bench.splice(editing.index, 1);
+  } else {
+    // Swap with selected sub
+    const targetIdx = Number(targetVal);
+    if (isNaN(targetIdx) || targetIdx < 0 || targetIdx >= state.subs.length) return;
+    const swapped = state.subs[targetIdx];
+    state.subs[targetIdx] = p;
+    state.bench[editing.index] = swapped;
+  }
+
+  closeModal();
+  render();
+  save();
+  toast('انتقال انجام شد');
+});
+
+modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+document.addEventListener('dragover', (e) => {
+  if (e.target.closest('.card')) e.preventDefault();
+});
+document.addEventListener('drop', (e) => {
+  const card = e.target.closest('.card');
+  if (!card) return;
+  e.preventDefault();
+  const file = e.dataTransfer.files[0];
+  if (!file) return;
+  processImageFile(file, (dataUrl) => {
+    const p = getPlayer(card.dataset.zone, Number(card.dataset.index));
+    if (p) {
+      pushHistory();
+      p.photo = dataUrl;
       render();
+      save();
+      toast('عکس اضافه شد');
     }
   });
+});
 
-  // Export Image
-  document.getElementById('exportBtn').addEventListener('click', () => {
-    const btn = document.getElementById('exportBtn');
-    const originalText = btn.textContent;
-    btn.textContent = '⏳ در حال ساخت...';
-    btn.disabled = true;
-
-    html2canvas(document.getElementById('board'), {
-      backgroundColor: '#0a1118',
-      scale: 2,
-      useCORS: true,
-      logging: false
-    }).then(canvas => {
-      const link = document.createElement('a');
-      link.download = `lineup-${state.formation}.png`;
-      link.href = canvas.toDataURL('image/png');
-      link.click();
-    }).catch(err => {
-      alert('خطا در ساخت تصویر: ' + err.message);
-    }).finally(() => {
-      btn.textContent = originalText;
-      btn.disabled = false;
-    });
+document.getElementById('formationSelect').addEventListener('change', (e) => {
+  pushHistory();
+  state.formation = e.target.value;
+  const f = FORMATIONS[state.formation];
+  state.lineup = f.map((pos, i) => {
+    const old = state.lineup[i] || blankPlayer();
+    old.pos = pos.pos;
+    return old;
   });
-
-  // Drag & Drop Photo on Cards
-  document.addEventListener('dragover', (e) => {
-    if (e.target.closest('.card')) e.preventDefault();
-  });
-  document.addEventListener('drop', (e) => {
-    const card = e.target.closest('.card');
-    if (!card) return;
-    e.preventDefault();
-    const file = e.dataTransfer.files[0];
-    if (!file || !file.type.startsWith('image/')) return;
-    
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      const img = new Image();
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        const MAX = 400;
-        let w = img.width, h = img.height;
-        if (w > MAX || h > MAX) {
-          const r = Math.min(MAX / w, MAX / h);
-          w *= r; h *= r;
-        }
-        canvas.width = w; canvas.height = h;
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(img, 0, 0, w, h);
-        
-        const type = card.dataset.type;
-        const idx = Number(card.dataset.index);
-        const p = type === 'lineup' ? state.lineup[idx] : state.bench[idx];
-        if (p) {
-          p.photo = canvas.toDataURL('image/png');
-          render();
-          save();
-        }
-      };
-      img.src = ev.target.result;
-    };
-    reader.readAsDataURL(file);
-  });
-
-  // ==================== START ====================
-  if (!load()) {
-    initState();
-  }
   render();
+  save();
+});
+
+let teamTimer = null;
+document.getElementById('teamNameInput').addEventListener('input', (e) => {
+  state.team = e.target.value;
+  document.getElementById('teamTitleDisplay').textContent = state.team || 'MADRID TV SHOW';
+  clearTimeout(teamTimer);
+  teamTimer = setTimeout(() => {
+    pushHistory();
+    save();
+  }, 500);
+});
+
+document.getElementById('undoBtn').addEventListener('click', undo);
+document.getElementById('redoBtn').addEventListener('click', redo);
+
+document.addEventListener('keydown', (e) => {
+  const isMac = navigator.platform.toUpperCase().includes('MAC');
+  const mod = isMac ? e.metaKey : e.ctrlKey;
+
+  if (!mod) return;
+
+  if (e.key === 'z' || e.key === 'Z') {
+    if (e.shiftKey) { e.preventDefault(); redo(); }
+    else            { e.preventDefault(); undo(); }
+  } else if (e.key === 'y' || e.key === 'Y') {
+    e.preventDefault(); redo();
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+});
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+  if (!confirm('آیا از پاک کردن تمام اطلاعات مطمئن هستید؟')) return;
+  pushHistory();
+  localStorage.removeItem(STORAGE_KEY);
+  state = { formation: '4-3-3', team: 'MADRID TV SHOW', lineup: [], bench: [], subs: [] };
+  initState();
+  render();
+  save();
+  toast('ریست شد');
+});
+
+/* =========================================================
+   EXPORT  (only pitch + subs, no bench, no editing buttons)
+   ========================================================= */
+function triggerDownload(dataUrl, filename) {
+  const link = document.createElement('a');
+  link.download = filename;
+  link.href = dataUrl;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+document.getElementById('exportBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('exportBtn');
+  const originalText = btn.innerHTML;
+  btn.innerHTML = '⏳ در حال ساخت...';
+  btn.disabled = true;
+
+  const subsPanel = document.getElementById('subsPanel');
+  const subsWasEmpty = state.subs.length === 0;
+
+  document.body.classList.add('exporting');
+  if (subsWasEmpty) subsPanel.classList.add('export-hide');
+
+  const node = document.getElementById('board');
+  const filename = `lineup-${state.formation}-${Date.now()}.png`;
+  const scrollY = window.scrollY;
+  window.scrollTo(0, 0);
+  await new Promise(r => setTimeout(r, 120));
+
+  try {
+    let dataUrl = null;
+
+    if (window.htmlToImage && typeof window.htmlToImage.toPng === 'function') {
+      try {
+        dataUrl = await window.htmlToImage.toPng(node, {
+          pixelRatio: 2,
+          backgroundColor: '#060a10',
+          cacheBust: true,
+          skipFonts: false
+        });
+      } catch (err) {
+        console.warn('html-to-image failed, falling back…', err);
+        dataUrl = null;
+      }
+    }
+
+    if (!dataUrl) {
+      const canvas = await html2canvas(node, {
+        backgroundColor: '#060a10',
+        scale: 2,
+        useCORS: true,
+        allowTaint: false,
+        logging: false,
+        windowWidth: node.scrollWidth,
+        windowHeight: node.scrollHeight
+      });
+      dataUrl = canvas.toDataURL('image/png');
+    }
+
+    triggerDownload(dataUrl, filename);
+    toast('عکس دانلود شد ✓');
+  } catch (err) {
+    alert('خطا در ساخت تصویر: ' + (err && err.message ? err.message : err));
+  } finally {
+    document.body.classList.remove('exporting');
+    if (subsWasEmpty) subsPanel.classList.remove('export-hide');
+    btn.innerHTML = originalText;
+    btn.disabled = false;
+    window.scrollTo(0, scrollY);
+  }
+});
+
+/* =========================================================
+   START
+   ========================================================= */
+(function start() {
+  if (!load()) initState();
+  if (!state.bench || state.bench.length === 0) {
+    const starterSet = new Set(STARTERS = RM_STARTING_XI);
+    state.bench = Object.keys(RM_ROSTER)
+      .map(Number)
+      .filter(num => !starterSet.has(num))
+      .sort((a, b) => a - b)
+      .map(num => rosterToPlayer(num));
+  }
+  history = [snapshot()];
+  historyPtr = 0;
+  render();
+  updateHistoryButtons();
+})();
 </script>
 </body>
 </html>
