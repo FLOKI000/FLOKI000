@@ -25,8 +25,3 @@
 \<footer style="margin-top: 50px; text-align: center; color: #7f8c8d;">
 
 
-
-
-اینو مدرن سازی که و یه چیز متحرک و گردایانت میخواهم
-
-برای کد README.md
