@@ -1,49 +1,63 @@
- <!-- 🌌 FLOKI MODERN SOCIAL LINKS -->
+<!-- 🌌 FLOKI000 | MODERN SOCIAL LINKS -->
 
 <div align="center">
 
-  <h2>
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=800&size=28&pause=1000&color=1A8FCA&center=true&vCenter=true&width=435&lines=WELCOME+TO+FLOKI;EXPLORE+MY+WORLD;FLOKI000+%7C+EF3.IR" alt="FLOKI Animation" />
-  </h2>
+  <h1>
+    <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=32&pause=1000&color=1A8FCA&center=true&vCenter=true&width=400&lines=FLOKI000;WELCOME+TO+MY+WORLD" alt="FLOKI000" />
+  </h1>
 
   <p>
-    <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A8FCA,50:7C3AED,100:00D4FF&height=3&section=header" width="85%" alt="Gradient Line" />
+    <b>🌌 دنیای فلوکی | FLOKI000</b>
   </p>
 
   <p>
-    <b>🌐 سایت، پروژه‌ها و شبکه‌های اجتماعی فلوکی</b>
+    <img src="https://capsule-render.vercel.app/api?type=rect&color=0:1A8FCA,50:7C3AED,100:00D4FF&height=3&section=header" width="80%" alt="Gradient divider" />
   </p>
 
-  <br/>
+  <p>
+    <a href="https://floki000.github.io/WEB/" target="_blank">
+      <img src="https://img.shields.io/badge/🌐_WEBSITE-Visit_Now-1A8FCA?style=for-the-badge&labelColor=101828" alt="Website" />
+    </a>
+    &nbsp;
+    <a href="https://github.com/FLOKI000/FLOKI/" target="_blank">
+      <img src="https://img.shields.io/badge/💻_GITHUB-Explore_Repos-7C3AED?style=for-the-badge&labelColor=101828" alt="GitHub" />
+    </a>
+    &nbsp;
+    <a href="https://t.me/FLOKI000" target="_blank">
+      <img src="https://img.shields.io/badge/✈️_TELEGRAM-Join_Me-00AEEF?style=for-the-badge&labelColor=101828" alt="Telegram" />
+    </a>
+  </p>
+
+  <p>
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&duration=3000&pause=800&color=8B9BB4&center=true&vCenter=true&width=420&lines=Explore.+Create.+Innovate.;Welcome+to+the+FLOKI000+universe.;Stay+curious.+Keep+building." alt="Animated tagline" />
+  </p>
+
+  <br />
 
   <a href="https://floki000.github.io/WEB/" target="_blank">
-    <img src="https://img.shields.io/badge/🌐_WEBSITE-FLOKI-1A8FCA?style=for-the-badge&labelColor=0D1117" alt="FLOKI Website" />
+    <img src="https://img.shields.io/badge/🚀_سایت_فلوکی-1A8FCA?style=for-the-badge&logo=firefox&logoColor=white" alt="سایت فلوکی" />
   </a>
 
-  <br/><br/>
+  <br /><br />
 
   <a href="https://github.com/FLOKI000/FLOKI/" target="_blank">
-    <img src="https://img.shields.io/badge/💻_GITHUB-FLOKI-7C3AED?style=for-the-badge&labelColor=0D1117" alt="FLOKI GitHub" />
+    <img src="https://img.shields.io/badge/⚡_گیت_هاب_فلوکی-181717?style=for-the-badge&logo=github&logoColor=white" alt="گیت هاب فلوکی" />
   </a>
 
-  <br/><br/>
+  <br /><br />
 
   <a href="https://t.me/FLOKI000" target="_blank">
-    <img src="https://img.shields.io/badge/✈️_TELEGRAM-FLOKI000-00BFA6?style=for-the-badge&labelColor=0D1117" alt="FLOKI Telegram" />
+    <img src="https://img.shields.io/badge/💎_تلگرام_فلوکی-0088CC?style=for-the-badge&logo=telegram&logoColor=white" alt="تلگرام فلوکی" />
   </a>
 
-  <br/><br/>
+  <br /><br />
 
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:00D4FF,50:7C3AED,100:1A8FCA&height=3&section=footer" width="85%" alt="Gradient Line" />
-
-  <br/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1A8FCA,50:7C3AED,100:00D4FF&height=100&section=footer" width="100%" alt="Animated-style gradient footer" />
 
   <p>
-    <i>⚡ Code • Create • Innovate</i>
+    <sub>✨ Designed with passion by FLOKI000 ✨</sub>
   </p>
-
-  <img src="https://img.shields.io/badge/MADE_WITH-PASSION-1A8FCA?style=flat-square&labelColor=0D1117" alt="Made with Passion" />
 
 </div>
 
-<!-- 🌌 END FLOKI SECTION -->
+<!-- END FLOKI000 SOCIAL LINKS -->
