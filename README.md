@@ -1,67 +1,115 @@
-<div align="center">
+# 🌑 FLOKI000 | کارت ویزیت دیجیتال فلوکی
 
-<!-- آواتار -->
-<img src="https://raw.githubusercontent.com/FLOKI000/ef3.ir/refs/heads/main/0.webp" alt="فلوکی" width="150" style="border-radius: 50%;" />
+کارت ویزیت دیجیتال **FLOKI000** با طراحی مدرن، تم تیره، رنگ طلایی و رابط کاربری واکنش‌گرا؛ شامل معرفی، تصویر پروفایل، لینک‌های ارتباطی و انتقال خودکار به وب‌سایت اصلی.
 
-<br><br>
+---
 
-<!-- نام -->
-<h1>👋 سلام، من فلوکی هستم</h1>
+## ✨ امکانات
 
-<!-- عنوان شغلی -->
-<img src="https://img.shields.io/badge/برنامه‌نویس-و_توسعه‌دهنده-c9a94f?style=for-the-badge&labelColor=121212" alt="Role" />
+- 🎨 طراحی مدرن با تم مشکی و طلایی
+- 📱 طراحی واکنش‌گرا برای موبایل و دسکتاپ
+- 🖼️ نمایش تصویر پروفایل با تصویر جایگزین در صورت بروز خطا
+- ⏳ صفحه بارگذاری با شمارش معکوس ۵ ثانیه‌ای
+- 🔄 انتقال خودکار به وب‌سایت اصلی
+- 🛑 امکان لغو انتقال و مشاهده کارت ویزیت
+- 🌐 لینک مستقیم به وب‌سایت
+- 💬 دسترسی به پیام خصوصی تلگرام
+- 📢 لینک کانال تلگرام
+- 📧 کپی آدرس ایمیل با یک کلیک
+- 🔔 نمایش پیام تأیید پس از کپی ایمیل
+- ✨ انیمیشن نمایش کارت و افکت‌های تعاملی
+- 🔍 رعایت اصول پایه سئو و متادیتاهای Open Graph و Twitter Card
 
-<br><br>
+---
 
-<!-- بیو -->
-<p>
-  <b>متخصص در توسعه سیستم‌های تحت وب با معماری مدرن.</b><br>
-  تلفیق زیبایی و کارایی در دنیای دیجیتال ✨
-</p>
+## 🌐 لینک‌های ارتباطی
 
-<br>
+| عنوان | لینک |
+|---|---|
+| وب‌سایت | [floch3.blogix.ir](https://floch3.blogix.ir/) |
+| تلگرام شخصی | [@Floki000](https://t.me/Floki000) |
+| کانال تلگرام | [@CanfigVpn](https://t.me/CanfigVpn) |
+| ایمیل | erfan.floki3@gmail.com |
 
-<!-- جداکننده -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
-</div>
+## 🛠️ فناوری‌های استفاده‌شده
 
-<br>
+- HTML5
+- CSS3
+- JavaScript
+- SVG Icons
+- Google Fonts — Vazirmatn
+- CSS Grid و Flexbox
+- Clipboard API
+- Responsive Design
 
-## 🌐 راه‌های ارتباطی
+---
 
-<div align="center">
+## ⚙️ تنظیمات
 
-<a href="https://floch3.blogix.ir/" target="_blank">
-  <img src="https://img.shields.io/badge/وبسایت-floch3.blogix.ir-c9a94f?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=121212" alt="Website" />
-</a>
-&nbsp;
-<a href="https://t.me/Floki000" target="_blank">
-  <img src="https://img.shields.io/badge/پیوی_تلگرام-@Floki000-26A5E4?style=for-the-badge&logo=telegram&logoColor=white&labelColor=121212" alt="Telegram PV" />
-</a>
-&nbsp;
-<a href="https://t.me/CanfigVpn" target="_blank">
-  <img src="https://img.shields.io/badge/کانال_تلگرام-@CanfigVpn-26A5E4?style=for-the-badge&logo=telegram&logoColor=white&labelColor=121212" alt="Telegram Channel" />
-</a>
-&nbsp;
-<a href="mailto:erfan.floki3@gmail.com">
-  <img src="https://img.shields.io/badge/ایمیل-erfan.floki3@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=121212" alt="Email" />
-</a>
+### تغییر آدرس انتقال خودکار
 
-</div>
+در کد JavaScript مقدار زیر را تغییر دهید:
 
-<br>
+```javascript
+const REDIRECT_URL = "https://floch3.blogix.ir/";
+```
 
-<div align="center">
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-</div>
+### تغییر زمان انتقال
 
-<br>
+```javascript
+const TOTAL_SECONDS = 5;
+```
 
-## 📋 درباره من
+عدد `5` مدت‌زمان انتقال برحسب ثانیه است.
 
-```yaml
-نام: فلوکی
-نقش: برنامه‌نویس و توسعه‌دهنده وب
-تخصص: توسعه سیستم‌های تحت وب با معماری مدرن
-رویکرد: تلفیق زیبایی و کارایی در دنیای دیجیتال
+### تغییر ایمیل
+
+```javascript
+const email = "erfan.floki3@gmail.com";
+```
+
+### تغییر تصویر پروفایل
+
+تصویر اصلی در کد HTML:
+
+```html
+<img
+  src="photo.jpg"
+  alt="فلوکی"
+  onerror="this.src='https://raw.githubusercontent.com/FLOKI000/ef3.ir/refs/heads/main/0.webp'"
+>
+```
+
+با تغییر `photo.jpg` می‌توانید تصویر پروفایل را عوض کنید. در صورت بارگذاری نشدن تصویر اصلی، تصویر جایگزین نمایش داده می‌شود.
+
+---
+
+## 🚀 نحوه اجرا
+
+۱. فایل HTML را با نام `index.html` ذخیره کنید.
+
+۲. تصویر پروفایل را در صورت نیاز در کنار فایل قرار دهید.
+
+۳. فایل را در مرورگر باز کنید یا آن را روی GitHub Pages و هاست دلخواه خود منتشر کنید.
+
+۴. برای تغییر اطلاعات، لینک‌ها، رنگ‌ها و زمان انتقال، مقادیر مربوطه را در کد ویرایش کنید.
+
+---
+
+## 📌 نکات
+
+- قابلیت کپی ایمیل به پشتیبانی مرورگر از Clipboard API نیاز دارد و ممکن است به HTTPS یا محیط امن نیاز داشته باشد.
+- با انتخاب گزینه «لغو و ماندن در این صفحه»، شمارش معکوس متوقف شده و کارت ویزیت نمایش داده می‌شود.
+- متادیتاهای Open Graph برای بهبود نمایش لینک هنگام اشتراک‌گذاری در شبکه‌های اجتماعی در نظر گرفته شده‌اند.
+- تگ اختصاصی `<BLOGIX>` و متغیرهای قالب Blogix برای استفاده در محیط مربوطه حفظ شده‌اند.
+
+---
+
+## 👤 توسعه‌دهنده
+
+**FLOKI000**
+
+© ساخته شده توسط فلوکی
+
