@@ -1,90 +1,59 @@
-<!-- Header Banner -->
-<div align="center">
+# 🌟 کارت ویزیت دیجیتال فلوکی | FLOKI000
 
-<img src="https://dl.blogix.ir/20260701213232127336.webp" alt="FLOKI Banner" width="100%" />
+یک کارت ویزیت دیجیتال مدرن، واکنش‌گرا و فارسی با تم مشکی و طلایی، ساخته‌شده با HTML، CSS و JavaScript.
 
-</div>
+## ✨ امکانات
 
-<!-- Profile + Info -->
-<div align="center">
+- 🎨 طراحی مدرن با تم مشکی و طلایی
+- 📱 نمایش واکنش‌گرا در موبایل و دسکتاپ
+- ⏳ صفحه بارگذاری با شمارش معکوس ۵ ثانیه‌ای
+- 🔗 انتقال خودکار به وب‌سایت اصلی
+- ❌ امکان لغو انتقال و مشاهده کارت ویزیت
+- 👤 نمایش تصویر پروفایل و اطلاعات شخصی
+- 🌐 لینک مستقیم وب‌سایت
+- 💬 لینک ارتباط با تلگرام
+- 📢 لینک کانال تلگرام
+- 📧 امکان کپی آدرس ایمیل
+- 🔔 نمایش پیام تأیید کپی ایمیل
+- ✨ انیمیشن ورود کارت و افکت‌های تعاملی
+- 🔤 استفاده از فونت فارسی Vazirmatn
+- ♿ پشتیبانی از تنظیمات کاهش حرکت انیمیشن
 
-<br>
+## 🌐 لینک‌ها
 
-<img src="https://raw.githubusercontent.com/FLOKI000/ef3.ir/refs/heads/main/0.webp" alt="FLOKI" width="150" height="150" style="border-radius: 50%;" />
+- **وب‌سایت:** https://floch3.blogix.ir/
+- **تلگرام:** https://t.me/Floki000
+- **کانال تلگرام:** https://t.me/CanfigVpn
+- **ایمیل:** erfan.floki3@gmail.com
 
-<br><br>
+## 🛠️ فناوری‌ها
 
-<h1>سلام، من فلوکی هستم 👋</h1>
+- HTML5
+- CSS3
+- JavaScript
+- Google Fonts — Vazirmatn
+- SVG Icons
 
-<h3>💻 برنامه‌نویس و توسعه‌دهنده</h3>
+## 🚀 اجرا
 
-<p>
-  <b>متخصص در توسعه سیستم‌های تحت وب با معماری مدرن</b><br>
-  <i>تلفیق زیبایی و کارایی در دنیای دیجیتال</i>
-</p>
+۱. فایل `index.html` را در مرورگر باز کنید.
 
-<br>
+۲. برای انتشار آنلاین، فایل را در مخزن GitHub قرار دهید و از GitHub Pages استفاده کنید.
 
-<!-- Status Badges -->
-<img src="https://img.shields.io/badge/Status-Active-2ecc71?style=flat-square" />
-<img src="https://img.shields.io/badge/Version-Floki-c9a94f?style=flat-square" />
-<img src="https://img.shields.io/badge/Location-IRAN-blue?style=flat-square" />
+## ⚙️ تنظیمات
 
-<br><br>
+برای تغییر آدرس انتقال خودکار، مقدار `REDIRECT_URL` را در کد JavaScript تغییر دهید.
 
-<!-- Divider -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+برای تغییر زمان انتقال، مقدار `TOTAL_SECONDS` را تغییر دهید.
 
-</div>
+برای تغییر ایمیل، مقدار متغیر `email` را ویرایش کنید.
 
-<br>
+برای تغییر تصویر پروفایل، آدرس موجود در ویژگی `src` تصویر را تغییر دهید.
 
-<!-- Social Links -->
-<div align="center">
+## 📄 مجوز
 
-## 🌐 راه‌های ارتباطی
+این پروژه برای استفاده و توسعه شخصی طراحی شده است.
 
-<br>
+---
 
-<a href="https://floch3.blogix.ir/" target="_blank">
-  <img src="https://img.shields.io/badge/🌍_وب‌سایت-floch3.blogix.ir-c9a94f?style=for-the-badge&logoColor=white" alt="Website" />
-</a>
-&nbsp;&nbsp;
-<a href="https://t.me/Floki000" target="_blank">
-  <img src="https://img.shields.io/badge/✈️_پیوی_تلگرام-@Floki000-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram PV" />
-</a>
-
-<br><br>
-
-<a href="https://t.me/CanfigVpn" target="_blank">
-  <img src="https://img.shields.io/badge/📢_کانال_تلگرام-@CanfigVpn-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Channel" />
-</a>
-&nbsp;&nbsp;
-<a href="mailto:erfan.floki3@gmail.com">
-  <img src="https://img.shields.io/badge/📧_ایمیل-erfan.floki3@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-</a>
-
-</div>
-
-<br>
-
-<div align="center">
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
-</div>
-
-<br>
-
-<!-- About Section -->
-<div align="center">
-
-## 👤 درباره من
-
-</div>
-
-```yaml
-نام:       فلوکی
-نقش:       برنامه‌نویس و توسعه‌دهنده وب
-تخصص:      توسعه سیستم‌های تحت وب با معماری مدرن
-هدف:       تلفیق زیبایی و کارایی در دنیای دیجیتال
-وب‌سایت:   https://floch3.blogix.ir/
-ایمیل:     erfan.floki3@gmail.com
+ساخته‌شده با ❤️ توسط **FLOKI000**
