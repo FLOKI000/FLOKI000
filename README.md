@@ -1,102 +1,43 @@
-<!-- FLOKI Header -->
 <div align="center">
 
-  <h1>🔥 FLOKI 🔥</h1>
-  <p><i>پروژه شخصی فلوکی — وب، گیت‌هاب و تلگرام</i></p>
+<!-- عنوان اصلی -->
+<h1>🔥 FLOKI 🔥</h1>
+<p>به پروژه فلوکی خوش آمدید</p>
 
-  <img src="https://img.shields.io/badge/Status-Active-success?style=flat-square" alt="Status">
-  <img src="https://img.shields.io/badge/Version-1.0-blue?style=flat-square" alt="Version">
-  <img src="https://img.shields.io/badge/License-MIT-orange?style=flat-square" alt="License">
-
-</div>
-
-<br>
-
----
-
-## 🌐 لینک‌های ارتباطی
-
-<div align="center">
-
-### 🌍 سایت رسمی
-
+<!-- دکمه‌ها -->
 <a href="https://floki000.github.io/WEB/" target="_blank">
-  <img src="https://img.shields.io/badge/Website-FLOKI-1A8FCA?style=for-the-badge&logo=firefox&logoColor=white" 
-       alt="Website"
-       style="transition: transform 0.2s ease-in-out;"
-       onmouseover="this.style.transform='scale(1.15)'"
-       onmouseout="this.style.transform='scale(1.0)'">
+  <img src="https://img.shields.io/badge/Website-FLOKI-1A8FCA?style=for-the-badge&logo=firefox&logoColor=white" alt="Website" />
 </a>
-
-<br><br>
-
-### 💻 گیت‌هاب
-
+&nbsp;
 <a href="https://github.com/FLOKI000/FLOKI/" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-FLOKI-181717?style=for-the-badge&logo=github&logoColor=white" 
-       alt="GitHub"
-       style="transition: transform 0.2s ease-in-out;"
-       onmouseover="this.style.transform='scale(1.15)'"
-       onmouseout="this.style.transform='scale(1.0)'">
+  <img src="https://img.shields.io/badge/GitHub-FLOKI-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</a>
+&nbsp;
+<a href="https://t.me/FLOKI000" target="_blank">
+  <img src="https://img.shields.io/badge/Telegram-FLOKI000-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
 </a>
 
 <br><br>
 
-### ✈️ تلگرام
-
-<a href="https://t.me/FLOKI000" target="_blank">
-  <img src="https://img.shields.io/badge/Telegram-FLOKI000-1A8FCA?style=for-the-badge&logo=telegram&logoColor=white" 
-       alt="Telegram"
-       style="transition: transform 0.2s ease-in-out;"
-       onmouseover="this.style.transform='scale(1.15)'"
-       onmouseout="this.style.transform='scale(1.0)'">
-</a>
+<!-- جداکننده -->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
 </div>
 
-<br>
-
----
-
-## 📌 درباره پروژه
-
-<div dir="rtl">
-
-**فلوکی** یک پروژه‌ی شخصی است که شامل وب‌سایت، مخزن گیت‌هاب و کانال تلگرام می‌باشد.
-هدف این پروژه اشتراک‌گذاری محتوا، ابزارها و مطالب مفید برای کاربران فارسی‌زبان است.
-
-</div>
-
----
-
-## 🛠️ ویژگی‌ها
-
-- ✅ رابط کاربری ساده و سبک
-- ✅ طراحی واکنش‌گرا (Responsive)
-- ✅ پشتیبانی از زبان فارسی
-- ✅ به‌روزرسانی منظم
-
----
-
-## 📞 ارتباط با ما
-
-<div align="center">
+## 🌐 لینک‌های مفید
 
 | پلتفرم | لینک |
-|:------:|:----:|
-| 🌐 وب‌سایت | [floki000.github.io/WEB](https://floki000.github.io/WEB/) |
-| 💻 گیت‌هاب | [github.com/FLOKI000/FLOKI](https://github.com/FLOKI000/FLOKI/) |
+|--------|------|
+| 🌍 وب‌سایت | [floki000.github.io/WEB](https://floki000.github.io/WEB/) |
+| 💻 گیت‌هاب | [github.com/FLOKI000](https://github.com/FLOKI000/FLOKI/) |
 | ✈️ تلگرام | [t.me/FLOKI000](https://t.me/FLOKI000) |
 
+<div align="center">
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+### ⭐ اگر پروژه رو دوست داشتی، یه ستاره بده! ⭐
+
+<sub>ساخته شده با ❤️ توسط FLOKI</sub>
+
 </div>
-
----
-
-<footer align="center">
-
-  <p>
-    <sub>ساخته شده با ❤️ توسط <b>FLOKI</b></sub><br>
-    <sub>© 2025 FLOKI — All Rights Reserved</sub>
-  </p>
-
-</footer>
